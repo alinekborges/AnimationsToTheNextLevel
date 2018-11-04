@@ -37,6 +37,9 @@
                                             <state key="normal" title="Continuar">
                                                 <color key="titleColor" red="0.078431372550000003" green="0.62745098040000002" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="continueTap:" destination="-1" eventType="touchUpInside" id="inW-4s-zAv"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

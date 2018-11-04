@@ -32,6 +32,10 @@ class IntroView: UIViewController {
         self.configureViews()
     }
     
+    @IBAction func continueTap(_ sender: Any) {
+        self.present(MainView(), animated: true, completion: nil)
+    }
+    
 }
 
 extension IntroView: UIScrollViewDelegate {
