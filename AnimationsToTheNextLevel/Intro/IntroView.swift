@@ -8,11 +8,17 @@
 
 import UIKit
 
+enum IntroAction: Event {
+    case finish
+}
+
 class IntroView: UIViewController {
 
     @IBOutlet weak var titleContainer: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var nameLabel: UILabel!
+    
+    weak var coordinator: Coordinator?
     
     let font = UIFont.systemFont(ofSize: 50, weight: UIFont.Weight.thin)
     
@@ -20,6 +26,10 @@ class IntroView: UIViewController {
     
     init() {
         super.init(nibName: String(describing: IntroView.self), bundle: nil)
+    }
+    
+    deinit {
+        animators.forEach { $0.stopAnimation(true) }
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -33,7 +43,7 @@ class IntroView: UIViewController {
     }
     
     @IBAction func continueTap(_ sender: Any) {
-        self.present(MainView(), animated: true, completion: nil)
+        self.coordinator?.handle(IntroAction.finish)
     }
     
 }

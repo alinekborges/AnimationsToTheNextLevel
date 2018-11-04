@@ -17,6 +17,13 @@
 		6BBE0483218F8D4A009F2902 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE0481218F8D4A009F2902 /* MainView.swift */; };
 		6BBE0484218F8D4A009F2902 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BBE0482218F8D4A009F2902 /* MainView.xib */; };
 		6BBE0489218F9084009F2902 /* MaterialCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE0488218F9083009F2902 /* MaterialCardView.swift */; };
+		6BBE048F218F9BEA009F2902 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE048E218F9BEA009F2902 /* Coordinator.swift */; };
+		6BBE0491218F9C57009F2902 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE0490218F9C57009F2902 /* AppCoordinator.swift */; };
+		6BBE0493218F9D83009F2902 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE0492218F9D83009F2902 /* MainCoordinator.swift */; };
+		6BBE0496218FA25E009F2902 /* TheBasicsIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE0494218FA25E009F2902 /* TheBasicsIntro.swift */; };
+		6BBE0497218FA25E009F2902 /* TheBasicsIntro.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BBE0495218FA25E009F2902 /* TheBasicsIntro.xib */; };
+		6BBE049A218FA284009F2902 /* TheBasicsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE0499218FA284009F2902 /* TheBasicsCoordinator.swift */; };
+		6BBE049C218FA861009F2902 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE049B218FA861009F2902 /* CircleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +39,13 @@
 		6BBE0481218F8D4A009F2902 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		6BBE0482218F8D4A009F2902 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
 		6BBE0488218F9083009F2902 /* MaterialCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialCardView.swift; sourceTree = "<group>"; };
+		6BBE048E218F9BEA009F2902 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		6BBE0490218F9C57009F2902 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		6BBE0492218F9D83009F2902 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		6BBE0494218FA25E009F2902 /* TheBasicsIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBasicsIntro.swift; sourceTree = "<group>"; };
+		6BBE0495218FA25E009F2902 /* TheBasicsIntro.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TheBasicsIntro.xib; sourceTree = "<group>"; };
+		6BBE0499218FA284009F2902 /* TheBasicsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheBasicsCoordinator.swift; sourceTree = "<group>"; };
+		6BBE049B218FA861009F2902 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +106,7 @@
 			children = (
 				6BBE047E218D0E60009F2902 /* UIView+Constraints.swift */,
 				6BBE0488218F9083009F2902 /* MaterialCardView.swift */,
+				6BBE049B218FA861009F2902 /* CircleView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -101,6 +116,7 @@
 			children = (
 				6BBE0481218F8D4A009F2902 /* MainView.swift */,
 				6BBE0482218F8D4A009F2902 /* MainView.xib */,
+				6BBE0492218F9D83009F2902 /* MainCoordinator.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -108,6 +124,8 @@
 		6BBE048C218F99CC009F2902 /* TheBasics */ = {
 			isa = PBXGroup;
 			children = (
+				6BBE0499218FA284009F2902 /* TheBasicsCoordinator.swift */,
+				6BBE0498218FA261009F2902 /* Intro */,
 			);
 			path = TheBasics;
 			sourceTree = "<group>";
@@ -115,8 +133,19 @@
 		6BBE048D218F9B5B009F2902 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
+				6BBE048E218F9BEA009F2902 /* Coordinator.swift */,
+				6BBE0490218F9C57009F2902 /* AppCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		6BBE0498218FA261009F2902 /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				6BBE0494218FA25E009F2902 /* TheBasicsIntro.swift */,
+				6BBE0495218FA25E009F2902 /* TheBasicsIntro.xib */,
+			);
+			path = Intro;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BBE046F218D05EF009F2902 /* LaunchScreen.storyboard in Resources */,
+				6BBE0497218FA25E009F2902 /* TheBasicsIntro.xib in Resources */,
 				6BBE0484218F8D4A009F2902 /* MainView.xib in Resources */,
 				6BBE046C218D05EF009F2902 /* Assets.xcassets in Resources */,
 				6BBE047C218D0C1D009F2902 /* IntroView.xib in Resources */,
@@ -191,12 +221,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BBE049C218FA861009F2902 /* CircleView.swift in Sources */,
 				6BBE0467218D05EC009F2902 /* ViewController.swift in Sources */,
 				6BBE0465218D05EC009F2902 /* AppDelegate.swift in Sources */,
 				6BBE047A218D0C1D009F2902 /* IntroView.swift in Sources */,
+				6BBE049A218FA284009F2902 /* TheBasicsCoordinator.swift in Sources */,
 				6BBE0483218F8D4A009F2902 /* MainView.swift in Sources */,
+				6BBE0491218F9C57009F2902 /* AppCoordinator.swift in Sources */,
+				6BBE0496218FA25E009F2902 /* TheBasicsIntro.swift in Sources */,
 				6BBE047F218D0E60009F2902 /* UIView+Constraints.swift in Sources */,
 				6BBE0489218F9084009F2902 /* MaterialCardView.swift in Sources */,
+				6BBE0493218F9D83009F2902 /* MainCoordinator.swift in Sources */,
+				6BBE048F218F9BEA009F2902 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
