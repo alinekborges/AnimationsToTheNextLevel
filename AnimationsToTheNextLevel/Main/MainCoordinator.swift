@@ -37,6 +37,12 @@ final class MainCoordinator: Coordinator {
         self.currentCoordinator?.start()
     }
     
+    func showTheInteractive() {
+        self.currentCoordinator = TheInteractiveCoordinator(mainView: self.mainView)
+        self.currentCoordinator?.parentCoordinator = self
+        self.currentCoordinator?.start()
+    }
+    
     func dismissCurrent() {
         self.mainView.dismiss(animated: true, completion: nil)
         self.currentCoordinator = nil
@@ -50,6 +56,8 @@ extension MainCoordinator {
         switch action {
         case MainAction.theBasics:
             showTheBasics()
+        case MainAction.theInteractive:
+            showTheInteractive()
         case TheBasicsIntroAction.finish:
             dismissCurrent()
         default:

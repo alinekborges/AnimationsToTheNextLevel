@@ -31,7 +31,8 @@ class TheBasicsIntro: SwipableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        animatedViews.append(contentsOf: [withDurationLabel, insideLineStack])
+        self.addStep(withDurationLabel)
+        self.addStep(insideLineStack)
     }
     
     func nextPage(_ sender: Any) {

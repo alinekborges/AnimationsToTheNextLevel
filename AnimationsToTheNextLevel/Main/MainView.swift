@@ -10,11 +10,14 @@ import UIKit
 
 enum MainAction: Event {
     case theBasics
+    case theInteractive
 }
 
 class MainView: UIViewController {
 
     @IBOutlet weak var theBasicsButton: UIButton!
+    @IBOutlet weak var theInteractiveButton: UIButton!
+    @IBOutlet weak var theCurveButton: UIButton!
     
     weak var coordinator: Coordinator?
     
@@ -34,6 +37,8 @@ class MainView: UIViewController {
         switch sender {
         case theBasicsButton:
             self.coordinator?.handle(MainAction.theBasics)
+        case theInteractiveButton:
+            self.coordinator?.handle(MainAction.theInteractive)
         default:
             break
         }
