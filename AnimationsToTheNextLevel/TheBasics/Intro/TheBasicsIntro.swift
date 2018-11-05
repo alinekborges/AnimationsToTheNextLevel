@@ -8,9 +8,18 @@
 
 import UIKit
 
-class TheBasicsIntro: UIViewController {
+enum TheBasicsIntroAction: Event {
+    case finish
+}
+
+class TheBasicsIntro: SwipableViewController {
     
-    var showViewOrdered: [UIView] = []
+    @IBOutlet weak var ballConstraint: NSLayoutConstraint!
+    @IBOutlet weak var withDurationLabel: UILabel!
+    @IBOutlet weak var insideLineStack: UIStackView!
+    
+    var didAnimate = false
+    weak var coordinator: Coordinator?
     
     init() {
         super.init(nibName: String(describing: TheBasicsIntro.self), bundle: nil)
@@ -22,7 +31,31 @@ class TheBasicsIntro: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        animatedViews.append(contentsOf: [withDurationLabel, insideLineStack])
+    }
+    
+    func nextPage(_ sender: Any) {
         
+    }
+    
+    func animateBall() {
+        didAnimate = true
+        UIView.animate(withDuration: 0.3) {
+            self.ballConstraint.constant = 100
+            self.view.layoutIfNeeded()
+        }
+    }
+    
+    override func didFinishPresenting() {
+        
+        if didAnimate {
+            self.coordinator?.handle(TheBasicsIntroAction.finish)
+        }
+        
+        self.animateBall()
+        
+        //TODO: find curves and different properties
     }
 
 }
+

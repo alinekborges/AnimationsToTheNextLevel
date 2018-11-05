@@ -11,6 +11,13 @@ import Foundation
 protocol Event { }
 
 protocol Coordinator: class {
+    var parentCoordinator: Coordinator? { get set }
     func start()
     func handle(_ action: Event)
+}
+
+extension Coordinator where Self: Coordinator {
+    var parentCoordinator: Coordinator? {
+        return nil
+    }
 }

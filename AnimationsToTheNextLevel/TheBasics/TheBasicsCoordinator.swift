@@ -11,8 +11,12 @@ import UIKit
 class TheBasicsCoordinator: Coordinator {
     
     let mainView: MainView
+    
+    weak var parentCoordinator: Coordinator?
+    
     lazy var navigationController: UINavigationController = {
         let controller = UINavigationController()
+        controller.isNavigationBarHidden = true
         return controller
     }()
     
@@ -26,6 +30,7 @@ class TheBasicsCoordinator: Coordinator {
     
     func showIntro() {
         let view = TheBasicsIntro()
+        view.coordinator = self
         self.push(view)
         self.mainView.present(navigationController, animated: true, completion: nil)
     }
@@ -43,7 +48,12 @@ class TheBasicsCoordinator: Coordinator {
 extension TheBasicsCoordinator {
     
     func handle(_ action: Event) {
-        
+        switch action {
+        case TheBasicsIntroAction.finish:
+            self.parentCoordinator?.handle(action)
+        default:
+            break
+        }
     }
     
 }

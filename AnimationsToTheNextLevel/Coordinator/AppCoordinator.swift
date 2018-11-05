@@ -13,13 +13,15 @@ final class AppCoordinator: Coordinator {
     
     let window: UIWindow
     var mainCoordinator: MainCoordinator?
+    weak var parentCoordinator: Coordinator?
     
     init(window: UIWindow) {
         self.window = window
     }
     
     func start() {
-        showIntroView()
+        //showIntroView()
+        showMainView()
         self.window.makeKeyAndVisible()
     }
     

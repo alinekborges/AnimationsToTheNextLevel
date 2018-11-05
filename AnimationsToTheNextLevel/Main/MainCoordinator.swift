@@ -12,6 +12,7 @@ final class MainCoordinator: Coordinator {
     
     let window: UIWindow
     
+    weak var parentCoordinator: Coordinator?
     var currentCoordinator: Coordinator?
     var mainView: MainView!
     
@@ -32,7 +33,13 @@ final class MainCoordinator: Coordinator {
     
     func showTheBasics() {
         self.currentCoordinator = TheBasicsCoordinator(mainView: self.mainView)
+        self.currentCoordinator?.parentCoordinator = self
         self.currentCoordinator?.start()
+    }
+    
+    func dismissCurrent() {
+        self.mainView.dismiss(animated: true, completion: nil)
+        self.currentCoordinator = nil
     }
     
 }
@@ -43,6 +50,8 @@ extension MainCoordinator {
         switch action {
         case MainAction.theBasics:
             showTheBasics()
+        case TheBasicsIntroAction.finish:
+            dismissCurrent()
         default:
             break
         }
