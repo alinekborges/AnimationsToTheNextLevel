@@ -9,8 +9,6 @@
 import UIKit
 
 class FractionCompleteView: UIViewController {
-    
-    weak var coordinator: Coordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()

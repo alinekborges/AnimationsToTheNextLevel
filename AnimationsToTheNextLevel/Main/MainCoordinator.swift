@@ -32,13 +32,17 @@ final class MainCoordinator: Coordinator {
     }
     
     func showTheBasics() {
-        self.currentCoordinator = TheBasicsCoordinator(mainView: self.mainView)
-        self.currentCoordinator?.parentCoordinator = self
-        self.currentCoordinator?.start()
+        let views = [TheBasicsIntro.self]
+        self.showFlow(withViews: views)
     }
     
     func showTheInteractive() {
-        self.currentCoordinator = TheInteractiveCoordinator(mainView: self.mainView)
+        let views = [TheInteractiveView.self, FractionCompleteView.self]
+        self.showFlow(withViews: views)
+    }
+    
+    private func showFlow(withViews views: [UIViewController.Type]) {
+        self.currentCoordinator = FlowCoordinator(mainView: self.mainView, views: views)
         self.currentCoordinator?.parentCoordinator = self
         self.currentCoordinator?.start()
     }
@@ -58,7 +62,7 @@ extension MainCoordinator {
             showTheBasics()
         case MainAction.theInteractive:
             showTheInteractive()
-        case TheBasicsIntroAction.finish:
+        case FlowAction.finish:
             dismissCurrent()
         default:
             break

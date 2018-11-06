@@ -8,13 +8,23 @@
 
 import UIKit
 
-enum TheInteractiveAction: Event {
-    case done
+extension UIViewController {
+    
+    private struct AssociatedKeys {
+        static var ParentCoordinator = "ParentCoordinator"
+    }
+    
+    weak var parentCoordinator: Coordinator? {
+        get {
+            return objc_getAssociatedObject(self, &AssociatedKeys.ParentCoordinator) as? Coordinator
+        }
+        set {
+            objc_setAssociatedObject(self, &AssociatedKeys.ParentCoordinator, newValue, .OBJC_ASSOCIATION_ASSIGN)
+        }
+    }
 }
 
 class TheInteractiveView: SwipableViewController {
-    
-    weak var coordinator: Coordinator?
     
     var animator: UIViewPropertyAnimator?
     
@@ -33,7 +43,7 @@ class TheInteractiveView: SwipableViewController {
     @IBOutlet weak var collapsedView: UILabel!
     @IBOutlet weak var startAnimationLabel: UIView!
     
-    init() {
+    required init() {
         super.init(nibName: String(describing: TheInteractiveView.self), bundle: nil)
     }
     
@@ -53,19 +63,12 @@ class TheInteractiveView: SwipableViewController {
         self.addStep(hiddenViews, hidden: true)
         self.addStep(collapsedView, hidden: false)
         self.addStep(startAnimationLabel)
-        self.addStep([], completion: {
+        self.addStep(completion: {
             self.animateBall()
         })
-        
-        let button = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.fastForward, target: self, action: #selector(didTapNextButton(_:)))
-        self.navigationItem.rightBarButtonItem = button
     
     }
-    
-    @objc func didTapNextButton(_ sender: UIBarButtonItem) {
-        self.coordinator?.handle(TheInteractiveAction.done)
-    }
-    
+
     func animateBall() {
         self.animator = UIViewPropertyAnimator(
             duration: 0.3,

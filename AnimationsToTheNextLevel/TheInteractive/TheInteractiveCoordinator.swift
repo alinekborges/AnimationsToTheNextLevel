@@ -10,30 +10,30 @@ import UIKit
 
 class TheInteractiveCoordinator: FlowCoordinator {
     
-    override func start() {
-        showIntro()
-    }
-    
-    func showIntro() {
-        let view = TheInteractiveView()
-        view.coordinator = self
-        self.push(view)
-        self.mainView.present(navigationController, animated: true, completion: nil)
-    }
-    
-    func showFractionComplete() {
-        let view = FractionCompleteView()
-        view.coordinator = self
-        self.push(view)
-    }
-    
-    override func handle(_ action: Event) {
-        switch action {
-        case TheInteractiveAction.done:
-            self.showFractionComplete()
-        default:
-            break
-        }
-    }
+//    override init(mainView: MainView) {
+//        super.init(mainView: mainView)
+//        self.orderedCalls = [showIntro, showFractionComplete]
+//    }
+//
+//    func showIntro() {
+//        let view = TheInteractiveView()
+//        view.coordinator = self
+//        self.push(view)
+//    }
+//
+//    func showFractionComplete() {
+//        let view = FractionCompleteView()
+//        view.coordinator = self
+//        self.push(view)
+//    }
+//
+//    override func handle(_ action: Event) {
+//        switch action {
+//        case TheInteractiveAction.done:
+//            self.showFractionComplete()
+//        default:
+//            break
+//        }
+//    }
     
 }

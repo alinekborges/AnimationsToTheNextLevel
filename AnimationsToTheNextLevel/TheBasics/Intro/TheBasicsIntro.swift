@@ -8,10 +8,6 @@
 
 import UIKit
 
-enum TheBasicsIntroAction: Event {
-    case finish
-}
-
 class TheBasicsIntro: SwipableViewController {
     
     @IBOutlet weak var ballConstraint: NSLayoutConstraint!
@@ -19,9 +15,8 @@ class TheBasicsIntro: SwipableViewController {
     @IBOutlet weak var insideLineStack: UIStackView!
     
     var didAnimate = false
-    weak var coordinator: Coordinator?
     
-    init() {
+    required init() {
         super.init(nibName: String(describing: TheBasicsIntro.self), bundle: nil)
     }
     
@@ -35,10 +30,6 @@ class TheBasicsIntro: SwipableViewController {
         self.addStep(insideLineStack)
     }
     
-    func nextPage(_ sender: Any) {
-        
-    }
-    
     func animateBall() {
         didAnimate = true
         UIView.animate(withDuration: 0.3) {
@@ -48,10 +39,6 @@ class TheBasicsIntro: SwipableViewController {
     }
     
     override func didFinishPresenting() {
-        
-        if didAnimate {
-            self.coordinator?.handle(TheBasicsIntroAction.finish)
-        }
         
         self.animateBall()
         
