@@ -36,6 +36,7 @@
 		6BF0CF04219132C50044897E /* TheCurveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF0CF02219132C50044897E /* TheCurveView.xib */; };
 		6BF0CF0A219134230044897E /* ThePropertiesIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF0CF08219134230044897E /* ThePropertiesIntroView.swift */; };
 		6BF0CF0B219134230044897E /* ThePropertiesIntroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF0CF09219134230044897E /* ThePropertiesIntroView.xib */; };
+		6BF0CF0D219136890044897E /* BezierPathPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF0CF0C219136890044897E /* BezierPathPointsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		6BF0CF02219132C50044897E /* TheCurveView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TheCurveView.xib; sourceTree = "<group>"; };
 		6BF0CF08219134230044897E /* ThePropertiesIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThePropertiesIntroView.swift; sourceTree = "<group>"; };
 		6BF0CF09219134230044897E /* ThePropertiesIntroView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThePropertiesIntroView.xib; sourceTree = "<group>"; };
+		6BF0CF0C219136890044897E /* BezierPathPointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierPathPointsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +229,7 @@
 			children = (
 				6BF0CF01219132C50044897E /* TheCurveView.swift */,
 				6BF0CF02219132C50044897E /* TheCurveView.xib */,
+				6BF0CF0C219136890044897E /* BezierPathPointsView.swift */,
 			);
 			path = TheCurveIntro;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				6BBE049E218FC737009F2902 /* SwipableViewController.swift in Sources */,
 				6BF0CF03219132C50044897E /* TheCurveView.swift in Sources */,
 				6BBE04B52190E8C0009F2902 /* TheInteractiveCoordinator.swift in Sources */,
+				6BF0CF0D219136890044897E /* BezierPathPointsView.swift in Sources */,
 				6BBE0465218D05EC009F2902 /* AppDelegate.swift in Sources */,
 				6BBE047A218D0C1D009F2902 /* IntroView.swift in Sources */,
 				6BBE04C521910FA4009F2902 /* FlowCoordinator.swift in Sources */,
