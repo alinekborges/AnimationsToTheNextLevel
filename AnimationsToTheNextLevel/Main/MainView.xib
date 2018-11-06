@@ -15,6 +15,7 @@
                 <outlet property="theBasicsButton" destination="9AK-j4-Tiv" id="VmA-t0-4AI"/>
                 <outlet property="theCurveButton" destination="fc4-kY-omJ" id="TFo-tg-9oa"/>
                 <outlet property="theInteractiveButton" destination="22j-XQ-OHI" id="AUP-hF-MV4"/>
+                <outlet property="thePropertiesButton" destination="T8Y-f5-Bbu" id="SV0-AY-gBk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,10 +28,10 @@
                     <rect key="frame" x="30" y="0.0" width="607" height="375"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOr-SQ-YcW">
-                            <rect key="frame" x="0.0" y="0.0" width="3030" height="375"/>
+                            <rect key="frame" x="0.0" y="0.0" width="2421.5" height="375"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="fvy-hj-iM3">
-                                    <rect key="frame" x="0.0" y="40" width="3030" height="295"/>
+                                    <rect key="frame" x="0.0" y="40" width="2421.5" height="295"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdP-pI-3Ql" customClass="MaterialCardView" customModule="AnimationsToTheNextLevel" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="595" height="295"/>
@@ -87,17 +88,17 @@
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pHa-zc-W10" customClass="MaterialCardView" customModule="AnimationsToTheNextLevel" customModuleProvider="target">
-                                            <rect key="frame" x="1217.5" y="0.0" width="594.5" height="295"/>
+                                            <rect key="frame" x="1217.5" y="0.0" width="595" height="295"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fc4-kY-omJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="594.5" height="295"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="595" height="295"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <connections>
                                                         <action selector="onTap:" destination="-1" eventType="touchUpInside" id="5tT-GF-e0X"/>
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Curve" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efb-xZ-qiK">
-                                                    <rect key="frame" x="243.5" y="80" width="107.5" height="30"/>
+                                                    <rect key="frame" x="244" y="80" width="107.5" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
                                                     <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
@@ -113,19 +114,38 @@
                                                 <constraint firstAttribute="bottom" secondItem="fc4-kY-omJ" secondAttribute="bottom" id="saZ-RY-pt3"/>
                                             </constraints>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L9I-DR-BT8" customClass="MaterialCardView" customModule="AnimationsToTheNextLevel" customModuleProvider="target">
-                                            <rect key="frame" x="1826" y="0.0" width="595" height="295"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hp8-dz-5ig" customClass="MaterialCardView" customModule="AnimationsToTheNextLevel" customModuleProvider="target">
+                                            <rect key="frame" x="1826.5" y="0.0" width="595" height="295"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T8Y-f5-Bbu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="595" height="295"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <connections>
+                                                        <action selector="onTap:" destination="-1" eventType="touchUpInside" id="DTp-sj-DAB"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Properties" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bib-Ne-ctN">
+                                                    <rect key="frame" x="222.5" y="80" width="150" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lHh-cF-Vyv" customClass="MaterialCardView" customModule="AnimationsToTheNextLevel" customModuleProvider="target">
-                                            <rect key="frame" x="2435" y="0.0" width="595" height="295"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="T8Y-f5-Bbu" firstAttribute="top" secondItem="hp8-dz-5ig" secondAttribute="top" id="5nt-42-axv"/>
+                                                <constraint firstItem="bib-Ne-ctN" firstAttribute="centerX" secondItem="hp8-dz-5ig" secondAttribute="centerX" id="FEZ-h4-aOz"/>
+                                                <constraint firstItem="bib-Ne-ctN" firstAttribute="top" secondItem="hp8-dz-5ig" secondAttribute="top" constant="80" id="Lgv-yY-Udu"/>
+                                                <constraint firstAttribute="trailing" secondItem="T8Y-f5-Bbu" secondAttribute="trailing" id="fmv-Yj-FFd"/>
+                                                <constraint firstAttribute="bottom" secondItem="T8Y-f5-Bbu" secondAttribute="bottom" id="hy5-DQ-QJG"/>
+                                                <constraint firstItem="T8Y-f5-Bbu" firstAttribute="leading" secondItem="hp8-dz-5ig" secondAttribute="leading" id="x3F-2L-TB1"/>
+                                            </constraints>
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="lHh-cF-Vyv" firstAttribute="width" secondItem="tdP-pI-3Ql" secondAttribute="width" id="8ld-mT-BJA"/>
                                         <constraint firstItem="opS-Lr-WH1" firstAttribute="width" secondItem="tdP-pI-3Ql" secondAttribute="width" id="Gqq-bO-yjE"/>
-                                        <constraint firstItem="L9I-DR-BT8" firstAttribute="width" secondItem="tdP-pI-3Ql" secondAttribute="width" id="yv6-nr-Ejv"/>
+                                        <constraint firstItem="hp8-dz-5ig" firstAttribute="width" secondItem="tdP-pI-3Ql" secondAttribute="width" id="dea-Dq-XZQ"/>
+                                        <constraint firstItem="pHa-zc-W10" firstAttribute="width" secondItem="tdP-pI-3Ql" secondAttribute="width" id="vF9-2z-hH4"/>
                                     </constraints>
                                 </stackView>
                             </subviews>

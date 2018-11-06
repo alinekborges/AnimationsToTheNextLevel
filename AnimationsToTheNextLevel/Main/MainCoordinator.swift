@@ -41,6 +41,16 @@ final class MainCoordinator: Coordinator {
         self.showFlow(withViews: views)
     }
     
+    func showTheCurve() {
+        let views = [TheCurveView.self]
+        self.showFlow(withViews: views)
+    }
+    
+    func showTheProperties() {
+        let views = [ThePropertiesIntroView.self]
+        self.showFlow(withViews: views)
+    }
+    
     private func showFlow(withViews views: [UIViewController.Type]) {
         self.currentCoordinator = FlowCoordinator(mainView: self.mainView, views: views)
         self.currentCoordinator?.parentCoordinator = self
@@ -62,6 +72,10 @@ extension MainCoordinator {
             showTheBasics()
         case MainAction.theInteractive:
             showTheInteractive()
+        case MainAction.theCurve:
+            showTheCurve()
+        case MainAction.theProperties:
+            showTheProperties()
         case FlowAction.finish:
             dismissCurrent()
         default:

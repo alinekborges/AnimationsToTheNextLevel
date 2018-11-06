@@ -11,6 +11,8 @@ import UIKit
 enum MainAction: Event {
     case theBasics
     case theInteractive
+    case theCurve
+    case theProperties
 }
 
 class MainView: UIViewController {
@@ -18,6 +20,7 @@ class MainView: UIViewController {
     @IBOutlet weak var theBasicsButton: UIButton!
     @IBOutlet weak var theInteractiveButton: UIButton!
     @IBOutlet weak var theCurveButton: UIButton!
+    @IBOutlet weak var thePropertiesButton: UIButton!
     
     weak var coordinator: Coordinator?
     
@@ -39,6 +42,10 @@ class MainView: UIViewController {
             self.coordinator?.handle(MainAction.theBasics)
         case theInteractiveButton:
             self.coordinator?.handle(MainAction.theInteractive)
+        case theCurveButton:
+            self.coordinator?.handle(MainAction.theCurve)
+        case thePropertiesButton:
+            self.coordinator?.handle(MainAction.theProperties)
         default:
             break
         }
