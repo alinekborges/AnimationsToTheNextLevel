@@ -11,6 +11,7 @@ import UIKit
 class BezierPathPointsView: UIView {
     
     var onPointChange: ((CGPoint, CGPoint)->Void)?
+    var onFinishPoints: ((CGPoint, CGPoint)->Void)?
     
     var pointAView: UIView = {
         let view = UIView()
@@ -80,9 +81,9 @@ class BezierPathPointsView: UIView {
     
     func updatePoints() {
         let pointA = CGPoint(x: pointAView.center.x / self.frame.width,
-                             y: pointAView.center.y / self.frame.height)
+                             y: (1 - pointAView.center.y / self.frame.height))
         let pointB = CGPoint(x: pointBView.center.x / self.frame.width,
-                             y: pointBView.center.y / self.frame.height)
+                             y: (1 - pointBView.center.y / self.frame.height))
         self.onPointChange?(pointA, pointB)
     }
     
@@ -122,6 +123,25 @@ class BezierPathPointsView: UIView {
             redraw()
         }
         
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesEnded(touches, with: event)
+        guard let touch: UITouch = touches.first else {
+            return
+        }
+        
+        if touch.view == pointAView || touch.view == pointBView {
+            finishPoints()
+        }
+    }
+    
+    func finishPoints() {
+        let pointA = CGPoint(x: pointAView.center.x / self.frame.width,
+                             y: 1 - (pointAView.center.y / self.frame.height))
+        let pointB = CGPoint(x: pointBView.center.x / self.frame.width,
+                             y: 1 - (pointBView.center.y / self.frame.height))
+        self.onFinishPoints?(pointA, pointB)
     }
     
     func addPoints() {
