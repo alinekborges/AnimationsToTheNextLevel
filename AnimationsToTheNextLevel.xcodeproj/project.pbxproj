@@ -10,6 +10,8 @@
 		6B821D012192300C00C5332D /* SluggishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B821CFF2192300C00C5332D /* SluggishView.swift */; };
 		6B821D022192300C00C5332D /* SluggishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B821D002192300C00C5332D /* SluggishView.xib */; };
 		6B821D04219233DF00C5332D /* NSLayoutConstraint+AnimatedConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B821D03219233DF00C5332D /* NSLayoutConstraint+AnimatedConstant.swift */; };
+		6B821D082192870B00C5332D /* RuleOfThreeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B821D062192870B00C5332D /* RuleOfThreeView.swift */; };
+		6B821D092192870B00C5332D /* RuleOfThreeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B821D072192870B00C5332D /* RuleOfThreeView.xib */; };
 		6BBE0465218D05EC009F2902 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE0464218D05EC009F2902 /* AppDelegate.swift */; };
 		6BBE0467218D05EC009F2902 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BBE0466218D05EC009F2902 /* ViewController.swift */; };
 		6BBE046C218D05EF009F2902 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BBE046B218D05EF009F2902 /* Assets.xcassets */; };
@@ -45,6 +47,8 @@
 		6B821CFF2192300C00C5332D /* SluggishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SluggishView.swift; sourceTree = "<group>"; };
 		6B821D002192300C00C5332D /* SluggishView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SluggishView.xib; sourceTree = "<group>"; };
 		6B821D03219233DF00C5332D /* NSLayoutConstraint+AnimatedConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+AnimatedConstant.swift"; sourceTree = "<group>"; };
+		6B821D062192870B00C5332D /* RuleOfThreeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleOfThreeView.swift; sourceTree = "<group>"; };
+		6B821D072192870B00C5332D /* RuleOfThreeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RuleOfThreeView.xib; sourceTree = "<group>"; };
 		6BBE0461218D05EC009F2902 /* AnimationsToTheNextLevel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationsToTheNextLevel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BBE0464218D05EC009F2902 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BBE0466218D05EC009F2902 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +100,15 @@
 				6B821D002192300C00C5332D /* SluggishView.xib */,
 			);
 			path = Sluggish;
+			sourceTree = "<group>";
+		};
+		6B821D05219284A200C5332D /* 03RuleOfThree */ = {
+			isa = PBXGroup;
+			children = (
+				6B821D062192870B00C5332D /* RuleOfThreeView.swift */,
+				6B821D072192870B00C5332D /* RuleOfThreeView.xib */,
+			);
+			path = 03RuleOfThree;
 			sourceTree = "<group>";
 		};
 		6BBE0458218D05EC009F2902 = {
@@ -205,6 +218,7 @@
 		6BBE04A0218FD6AC009F2902 /* TheInteractive */ = {
 			isa = PBXGroup;
 			children = (
+				6B821D05219284A200C5332D /* 03RuleOfThree */,
 				6BBE04B62190F617009F2902 /* 02FractionComplete */,
 				6BBE04B32190E8A4009F2902 /* 01Intro */,
 			);
@@ -329,6 +343,7 @@
 				6BF0CF0B219134230044897E /* ThePropertiesIntroView.xib in Resources */,
 				6BBE0497218FA25E009F2902 /* TheBasicsIntro.xib in Resources */,
 				6BBE0484218F8D4A009F2902 /* MainView.xib in Resources */,
+				6B821D092192870B00C5332D /* RuleOfThreeView.xib in Resources */,
 				6B821D022192300C00C5332D /* SluggishView.xib in Resources */,
 				6BBE046C218D05EF009F2902 /* Assets.xcassets in Resources */,
 				6BBE047C218D0C1D009F2902 /* IntroView.xib in Resources */,
@@ -343,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B821D082192870B00C5332D /* RuleOfThreeView.swift in Sources */,
 				6BBE049C218FA861009F2902 /* CircleView.swift in Sources */,
 				6BBE0467218D05EC009F2902 /* ViewController.swift in Sources */,
 				6B821D012192300C00C5332D /* SluggishView.swift in Sources */,

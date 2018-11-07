@@ -39,7 +39,7 @@ final class MainCoordinator: Coordinator {
     }
     
     func showTheInteractive() {
-        let views = [TheInteractiveView.self, FractionCompleteView.self]
+        let views = [TheInteractiveView.self, FractionCompleteView.self, RuleOfThreeView.self]
         self.showFlow(withViews: views)
     }
     
