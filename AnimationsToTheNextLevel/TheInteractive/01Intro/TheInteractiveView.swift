@@ -17,6 +17,8 @@ class TheInteractiveView: SwipableViewController {
     @IBOutlet weak var ballConstraint: NSLayoutConstraint!
     @IBOutlet weak var selfAnimator: UILabel!
     @IBOutlet weak var durationLabel: UIView!
+    @IBOutlet weak var parentesisLabel: UILabel!
+    
     @IBOutlet weak var curveLabel: UIView!
     @IBOutlet weak var animationsLabel: UIView!
     @IBOutlet weak var animationDetailLabel: UIView!
@@ -40,7 +42,7 @@ class TheInteractiveView: SwipableViewController {
         self.title = ""
         
         self.addStep(selfAnimator)
-        self.addStep(durationLabel)
+        self.addStep([durationLabel, parentesisLabel])
         self.addStep(curveLabel)
         self.addStep([animationsLabel, closeLabel])
         self.addStep(animationDetailLabel)
