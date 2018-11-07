@@ -50,8 +50,6 @@ class TheCurveView: UIViewController {
     
     func setupAnimator(_ pointA: CGPoint, _ pointB: CGPoint) {
         self.animator?.stopAnimation(true)
-        
-        print("setup new animator")
     
         self.ballConstraint.constant = self.ballPosition
         self.view.layoutIfNeeded()

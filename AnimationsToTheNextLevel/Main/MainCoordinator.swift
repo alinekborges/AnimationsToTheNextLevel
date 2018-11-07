@@ -13,7 +13,9 @@ final class MainCoordinator: Coordinator {
     let window: UIWindow
     
     weak var parentCoordinator: Coordinator?
+    
     var currentCoordinator: Coordinator?
+    
     var mainView: MainView!
     
     init(window: UIWindow) {
@@ -42,7 +44,7 @@ final class MainCoordinator: Coordinator {
     }
     
     func showTheCurve() {
-        let views = [TheCurveView.self]
+        let views = [TheCurveView.self, SluggishView.self]
         self.showFlow(withViews: views)
     }
     

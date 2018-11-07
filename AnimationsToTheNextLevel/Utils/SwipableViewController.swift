@@ -10,7 +10,7 @@ import UIKit
 
 class SwipableViewController: UIViewController {
     
-    typealias AnimatedStep = (views: [UIView], hidden: Bool, completion: (()->Void)?)
+    typealias AnimatedStep = (views: [UIView], hidden: Bool, completion: (()->Void)?, onBack: (()->Void)?)
     var animatedSteps: [AnimatedStep] = []
     var currentPosition = -1
     
@@ -24,14 +24,21 @@ class SwipableViewController: UIViewController {
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.didSwipeRight(_:)))
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.didTap(_:)))
+        self.view.addGestureRecognizer(tapGesture)
     }
     
-    func addStep(_ views: [UIView] = [], hidden: Bool = false, completion: (()->Void)? = nil) {
-        self.animatedSteps.append(AnimatedStep(views: views, hidden: hidden, completion: completion))
+    func addStep(completion: @escaping (()->Void), onBack: @escaping (()->Void)) {
+        self.animatedSteps.append(AnimatedStep(views: [], hidden: true, completion: completion, onBack: onBack))
     }
     
-    func addStep(_ view: UIView, hidden: Bool = false, completion: (()->Void)? = nil) {
-        self.animatedSteps.append(AnimatedStep(views: [view], hidden: hidden, completion: completion))
+    func addStep(_ views: [UIView] = [], hidden: Bool = false, completion: (()->Void)? = nil, onBack: (()->Void)? = nil) {
+        self.animatedSteps.append(AnimatedStep(views: views, hidden: hidden, completion: completion, onBack: onBack))
+    }
+    
+    func addStep(_ view: UIView, hidden: Bool = false, completion: (()->Void)? = nil, onBack: (()->Void)? = nil) {
+        self.animatedSteps.append(AnimatedStep(views: [view], hidden: hidden, completion: completion, onBack: onBack))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +46,10 @@ class SwipableViewController: UIViewController {
         self.animatedSteps.forEach {
             $0.views.forEach { $0.isHidden = true }
         }
+    }
+    
+    @objc func didTap(_ gesture: UITapGestureRecognizer) {
+        showNext()
     }
     
     @objc func didSwipeLeft(_ gesture: UISwipeGestureRecognizer) {
@@ -79,7 +90,7 @@ class SwipableViewController: UIViewController {
                 $0.isHidden = !currentStep.hidden
             }
         }) { _ in
-            currentStep.completion?()
+            currentStep.onBack?()
         }
         
         self.currentPosition -= 1

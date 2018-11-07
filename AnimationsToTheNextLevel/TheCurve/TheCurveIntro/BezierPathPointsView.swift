@@ -64,12 +64,17 @@ class BezierPathPointsView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.clipsToBounds = true
-        self.addPoints()
-        redraw()
         
         self.layer.addSublayer(pointALayer)
         self.layer.addSublayer(pointBLayer)
         self.layer.addSublayer(pathLayer)
+        
+        self.layoutIfNeeded()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            self.addPoints()
+            self.redraw()
+        }
     }
     
     func redraw() {
@@ -96,7 +101,6 @@ class BezierPathPointsView: UIView {
     }
     
     func drawCurvePath(pointA: CGPoint, pointB: CGPoint) {
-        
         let bezierPath = UIBezierPath()
         bezierPath.move(to: startPoint)
         bezierPath.addCurve(to: endPoint, controlPoint1: pointA, controlPoint2: pointB)
@@ -145,8 +149,9 @@ class BezierPathPointsView: UIView {
     }
     
     func addPoints() {
-        self.pointAView.frame.origin = CGPoint.zero
-        self.pointBView.frame.origin = CGPoint.zero
+        
+        self.pointAView.center = CGPoint(x: 0.2 * self.frame.width, y: 0.2 * self.frame.height)
+        self.pointBView.center = CGPoint(x: 0.2 * self.frame.width, y: 0.2 * self.frame.height)
         
         self.addSubview(pointAView)
         self.addSubview(pointBView)
