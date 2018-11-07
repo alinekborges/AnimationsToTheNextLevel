@@ -93,6 +93,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B1C3B382193A52800613B17 /* TheWorldOnboarding */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = TheWorldOnboarding;
+			sourceTree = "<group>";
+		};
 		6B821CFE21922FF900C5332D /* Sluggish */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,7 +137,7 @@
 		6BBE0463218D05EC009F2902 /* AnimationsToTheNextLevel */ = {
 			isa = PBXGroup;
 			children = (
-				6BBE049F218FD6A7009F2902 /* New Group */,
+				6B1C3B382193A52800613B17 /* TheWorldOnboarding */,
 				6BBE048D218F9B5B009F2902 /* Coordinator */,
 				6BBE048C218F99CC009F2902 /* TheBasics */,
 				6BBE04A0218FD6AC009F2902 /* TheInteractive */,
@@ -206,13 +213,6 @@
 				6BBE0495218FA25E009F2902 /* TheBasicsIntro.xib */,
 			);
 			path = Intro;
-			sourceTree = "<group>";
-		};
-		6BBE049F218FD6A7009F2902 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		6BBE04A0218FD6AC009F2902 /* TheInteractive */ = {

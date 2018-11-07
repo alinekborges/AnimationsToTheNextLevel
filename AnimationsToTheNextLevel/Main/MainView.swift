@@ -24,6 +24,10 @@ class MainView: UIViewController {
     
     weak var coordinator: Coordinator?
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
+    }
+    
     init() {
         super.init(nibName: String(describing: MainView.self), bundle: nil)
     }

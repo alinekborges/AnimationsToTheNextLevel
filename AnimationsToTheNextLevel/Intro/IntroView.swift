@@ -97,4 +97,8 @@ extension IntroView {
         return label
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
+    }
+    
 }

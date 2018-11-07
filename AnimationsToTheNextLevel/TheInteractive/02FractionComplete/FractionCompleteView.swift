@@ -57,6 +57,10 @@ extension FractionCompleteView {
         self.animator?.pausesOnCompletion = false
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
+    }
+    
 }
 
 extension FractionCompleteView: UIScrollViewDelegate {

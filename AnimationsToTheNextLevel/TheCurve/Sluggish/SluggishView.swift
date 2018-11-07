@@ -97,6 +97,10 @@ extension SluggishView {
         self.scrollView.contentInsetAdjustmentBehavior = .never
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
+    }
+    
 }
 
 extension SluggishView: UIScrollViewDelegate {

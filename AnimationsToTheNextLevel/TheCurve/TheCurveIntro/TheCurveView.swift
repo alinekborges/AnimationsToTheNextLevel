@@ -62,6 +62,9 @@ class TheCurveView: UIViewController {
         self.animator?.pausesOnCompletion = false
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
+    }
 }
 
 extension TheCurveView: UIScrollViewDelegate {

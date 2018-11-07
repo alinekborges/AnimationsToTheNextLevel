@@ -44,6 +44,10 @@ class TheBasicsIntro: SwipableViewController {
         
         //TODO: find curves and different properties
     }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
+    }
 
 }
 

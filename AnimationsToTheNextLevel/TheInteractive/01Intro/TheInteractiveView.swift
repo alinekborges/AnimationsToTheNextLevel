@@ -65,4 +65,8 @@ class TheInteractiveView: SwipableViewController {
         })
         self.animator?.startAnimation()
     }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
+    }
 }

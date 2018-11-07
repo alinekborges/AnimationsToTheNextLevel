@@ -50,6 +50,10 @@ extension RuleOfThreeView {
         self.scrollView.delegate = self
     }
     
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.landscape
+    }
+    
 }
 
 extension RuleOfThreeView: UIScrollViewDelegate {

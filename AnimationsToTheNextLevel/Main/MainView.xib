@@ -44,8 +44,8 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Basics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ab5-hQ-LQt">
-                                                    <rect key="frame" x="241" y="80" width="112.5" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                                    <rect key="frame" x="219.5" y="60" width="156" height="42"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="35"/>
                                                     <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -54,7 +54,7 @@
                                             <constraints>
                                                 <constraint firstItem="9AK-j4-Tiv" firstAttribute="leading" secondItem="tdP-pI-3Ql" secondAttribute="leading" id="4xV-kx-RMh"/>
                                                 <constraint firstAttribute="bottom" secondItem="9AK-j4-Tiv" secondAttribute="bottom" id="BEl-eF-Tlc"/>
-                                                <constraint firstItem="ab5-hQ-LQt" firstAttribute="top" secondItem="tdP-pI-3Ql" secondAttribute="top" constant="80" id="Mka-Cx-3kw"/>
+                                                <constraint firstItem="ab5-hQ-LQt" firstAttribute="top" secondItem="tdP-pI-3Ql" secondAttribute="top" constant="60" id="Mka-Cx-3kw"/>
                                                 <constraint firstItem="ab5-hQ-LQt" firstAttribute="centerX" secondItem="tdP-pI-3Ql" secondAttribute="centerX" id="OQW-J5-9dx"/>
                                                 <constraint firstAttribute="trailing" secondItem="9AK-j4-Tiv" secondAttribute="trailing" id="fD0-nX-xgR"/>
                                                 <constraint firstItem="9AK-j4-Tiv" firstAttribute="top" secondItem="tdP-pI-3Ql" secondAttribute="top" id="vL6-oN-64n"/>
@@ -71,8 +71,8 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Interactive" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJD-lZ-Nr0">
-                                                    <rect key="frame" x="222.5" y="80" width="150" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                                    <rect key="frame" x="193.5" y="60" width="208" height="42"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="35"/>
                                                     <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -82,7 +82,7 @@
                                                 <constraint firstAttribute="trailing" secondItem="22j-XQ-OHI" secondAttribute="trailing" id="2Uy-hG-DEC"/>
                                                 <constraint firstAttribute="bottom" secondItem="22j-XQ-OHI" secondAttribute="bottom" id="5O8-bg-jtQ"/>
                                                 <constraint firstItem="22j-XQ-OHI" firstAttribute="leading" secondItem="opS-Lr-WH1" secondAttribute="leading" id="AEz-7S-r58"/>
-                                                <constraint firstItem="RJD-lZ-Nr0" firstAttribute="top" secondItem="opS-Lr-WH1" secondAttribute="top" constant="80" id="WNt-Rp-iyW"/>
+                                                <constraint firstItem="RJD-lZ-Nr0" firstAttribute="top" secondItem="opS-Lr-WH1" secondAttribute="top" constant="60" id="WNt-Rp-iyW"/>
                                                 <constraint firstItem="RJD-lZ-Nr0" firstAttribute="centerX" secondItem="opS-Lr-WH1" secondAttribute="centerX" id="dbP-Wu-UGr"/>
                                                 <constraint firstItem="22j-XQ-OHI" firstAttribute="top" secondItem="opS-Lr-WH1" secondAttribute="top" id="zHd-ga-hmq"/>
                                             </constraints>
@@ -98,8 +98,8 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Curve" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efb-xZ-qiK">
-                                                    <rect key="frame" x="244" y="80" width="107.5" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                                    <rect key="frame" x="223" y="60" width="149.5" height="42"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="35"/>
                                                     <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -108,7 +108,7 @@
                                             <constraints>
                                                 <constraint firstItem="fc4-kY-omJ" firstAttribute="top" secondItem="pHa-zc-W10" secondAttribute="top" id="24h-YC-7dv"/>
                                                 <constraint firstItem="Efb-xZ-qiK" firstAttribute="centerX" secondItem="pHa-zc-W10" secondAttribute="centerX" id="UEi-BD-R9i"/>
-                                                <constraint firstItem="Efb-xZ-qiK" firstAttribute="top" secondItem="pHa-zc-W10" secondAttribute="top" constant="80" id="Zhb-3C-e9k"/>
+                                                <constraint firstItem="Efb-xZ-qiK" firstAttribute="top" secondItem="pHa-zc-W10" secondAttribute="top" constant="60" id="Zhb-3C-e9k"/>
                                                 <constraint firstItem="fc4-kY-omJ" firstAttribute="leading" secondItem="pHa-zc-W10" secondAttribute="leading" id="bod-33-EjG"/>
                                                 <constraint firstAttribute="trailing" secondItem="fc4-kY-omJ" secondAttribute="trailing" id="cRK-Ic-Yi4"/>
                                                 <constraint firstAttribute="bottom" secondItem="fc4-kY-omJ" secondAttribute="bottom" id="saZ-RY-pt3"/>
@@ -125,8 +125,8 @@
                                                     </connections>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Properties" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bib-Ne-ctN">
-                                                    <rect key="frame" x="222.5" y="80" width="150" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="25"/>
+                                                    <rect key="frame" x="193.5" y="60" width="208" height="42"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="35"/>
                                                     <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -135,7 +135,7 @@
                                             <constraints>
                                                 <constraint firstItem="T8Y-f5-Bbu" firstAttribute="top" secondItem="hp8-dz-5ig" secondAttribute="top" id="5nt-42-axv"/>
                                                 <constraint firstItem="bib-Ne-ctN" firstAttribute="centerX" secondItem="hp8-dz-5ig" secondAttribute="centerX" id="FEZ-h4-aOz"/>
-                                                <constraint firstItem="bib-Ne-ctN" firstAttribute="top" secondItem="hp8-dz-5ig" secondAttribute="top" constant="80" id="Lgv-yY-Udu"/>
+                                                <constraint firstItem="bib-Ne-ctN" firstAttribute="top" secondItem="hp8-dz-5ig" secondAttribute="top" constant="60" id="Lgv-yY-Udu"/>
                                                 <constraint firstAttribute="trailing" secondItem="T8Y-f5-Bbu" secondAttribute="trailing" id="fmv-Yj-FFd"/>
                                                 <constraint firstAttribute="bottom" secondItem="T8Y-f5-Bbu" secondAttribute="bottom" id="hy5-DQ-QJG"/>
                                                 <constraint firstItem="T8Y-f5-Bbu" firstAttribute="leading" secondItem="hp8-dz-5ig" secondAttribute="leading" id="x3F-2L-TB1"/>
