@@ -42,8 +42,6 @@
 		6BF0CEFF219130D90044897E /* UIViewController+Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF0CEFE219130D90044897E /* UIViewController+Coordinator.swift */; };
 		6BF0CF03219132C50044897E /* TheCurveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF0CF01219132C50044897E /* TheCurveView.swift */; };
 		6BF0CF04219132C50044897E /* TheCurveView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF0CF02219132C50044897E /* TheCurveView.xib */; };
-		6BF0CF0A219134230044897E /* ThePropertiesIntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF0CF08219134230044897E /* ThePropertiesIntroView.swift */; };
-		6BF0CF0B219134230044897E /* ThePropertiesIntroView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BF0CF09219134230044897E /* ThePropertiesIntroView.xib */; };
 		6BF0CF0D219136890044897E /* BezierPathPointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BF0CF0C219136890044897E /* BezierPathPointsView.swift */; };
 /* End PBXBuildFile section */
 
@@ -85,8 +83,6 @@
 		6BF0CEFE219130D90044897E /* UIViewController+Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Coordinator.swift"; sourceTree = "<group>"; };
 		6BF0CF01219132C50044897E /* TheCurveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheCurveView.swift; sourceTree = "<group>"; };
 		6BF0CF02219132C50044897E /* TheCurveView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TheCurveView.xib; sourceTree = "<group>"; };
-		6BF0CF08219134230044897E /* ThePropertiesIntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThePropertiesIntroView.swift; sourceTree = "<group>"; };
-		6BF0CF09219134230044897E /* ThePropertiesIntroView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ThePropertiesIntroView.xib; sourceTree = "<group>"; };
 		6BF0CF0C219136890044897E /* BezierPathPointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierPathPointsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -285,18 +281,8 @@
 		6BF0CF05219133F50044897E /* TheProperties */ = {
 			isa = PBXGroup;
 			children = (
-				6BF0CF07219134110044897E /* ThePropertiesIntro */,
 			);
 			path = TheProperties;
-			sourceTree = "<group>";
-		};
-		6BF0CF07219134110044897E /* ThePropertiesIntro */ = {
-			isa = PBXGroup;
-			children = (
-				6BF0CF08219134230044897E /* ThePropertiesIntroView.swift */,
-				6BF0CF09219134230044897E /* ThePropertiesIntroView.xib */,
-			);
-			path = ThePropertiesIntro;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,7 +346,6 @@
 				6BBE04BE2190F676009F2902 /* FractionCompleteView.xib in Resources */,
 				6BBE046F218D05EF009F2902 /* LaunchScreen.storyboard in Resources */,
 				6BF0CF04219132C50044897E /* TheCurveView.xib in Resources */,
-				6BF0CF0B219134230044897E /* ThePropertiesIntroView.xib in Resources */,
 				6BBE0497218FA25E009F2902 /* TheBasicsIntro.xib in Resources */,
 				6BBE0484218F8D4A009F2902 /* MainView.xib in Resources */,
 				6B1C3B3C2193B4E100613B17 /* WorldOnboardingView.xib in Resources */,
@@ -395,7 +380,6 @@
 				6BBE0491218F9C57009F2902 /* AppCoordinator.swift in Sources */,
 				6BF0CEFF219130D90044897E /* UIViewController+Coordinator.swift in Sources */,
 				6BBE0496218FA25E009F2902 /* TheBasicsIntro.swift in Sources */,
-				6BF0CF0A219134230044897E /* ThePropertiesIntroView.swift in Sources */,
 				6BBE047F218D0E60009F2902 /* UIView+Constraints.swift in Sources */,
 				6BBE0489218F9084009F2902 /* MaterialCardView.swift in Sources */,
 				6B1C3B3B2193B4E100613B17 /* WorldOnboardingView.swift in Sources */,
@@ -543,6 +527,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 68SZERZ856;
 				INFOPLIST_FILE = AnimationsToTheNextLevel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -550,10 +535,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alinekborges.AnimationsToTheNextLevel;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alinekborges.animations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -562,6 +548,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 68SZERZ856;
 				INFOPLIST_FILE = AnimationsToTheNextLevel/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -569,10 +556,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.alinekborges.AnimationsToTheNextLevel;
+				PRODUCT_BUNDLE_IDENTIFIER = com.alinekborges.animations;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};

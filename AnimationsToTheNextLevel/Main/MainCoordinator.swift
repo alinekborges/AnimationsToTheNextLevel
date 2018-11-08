@@ -49,8 +49,8 @@ final class MainCoordinator: Coordinator {
     }
     
     func showTheProperties() {
-        let views = [ThePropertiesIntroView.self]
-        self.showFlow(withViews: views)
+        //let views = [ThePropertiesIntroView.self]
+        //self.showFlow(withViews: views)
     }
     
     func showTheOnboarding() {
