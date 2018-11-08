@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		6B1C3B3B2193B4E100613B17 /* WorldOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1C3B392193B4E100613B17 /* WorldOnboardingView.swift */; };
 		6B1C3B3C2193B4E100613B17 /* WorldOnboardingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B1C3B3A2193B4E100613B17 /* WorldOnboardingView.xib */; };
+		6B1C3B402193D45000613B17 /* SliddingCommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1C3B3E2193D45000613B17 /* SliddingCommentsView.swift */; };
+		6B1C3B412193D45000613B17 /* SliddingCommentsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B1C3B3F2193D45000613B17 /* SliddingCommentsView.xib */; };
 		6B821D012192300C00C5332D /* SluggishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B821CFF2192300C00C5332D /* SluggishView.swift */; };
 		6B821D022192300C00C5332D /* SluggishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B821D002192300C00C5332D /* SluggishView.xib */; };
 		6B821D04219233DF00C5332D /* NSLayoutConstraint+AnimatedConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B821D03219233DF00C5332D /* NSLayoutConstraint+AnimatedConstant.swift */; };
@@ -48,6 +50,8 @@
 /* Begin PBXFileReference section */
 		6B1C3B392193B4E100613B17 /* WorldOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldOnboardingView.swift; sourceTree = "<group>"; };
 		6B1C3B3A2193B4E100613B17 /* WorldOnboardingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorldOnboardingView.xib; sourceTree = "<group>"; };
+		6B1C3B3E2193D45000613B17 /* SliddingCommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliddingCommentsView.swift; sourceTree = "<group>"; };
+		6B1C3B3F2193D45000613B17 /* SliddingCommentsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliddingCommentsView.xib; sourceTree = "<group>"; };
 		6B821CFF2192300C00C5332D /* SluggishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SluggishView.swift; sourceTree = "<group>"; };
 		6B821D002192300C00C5332D /* SluggishView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SluggishView.xib; sourceTree = "<group>"; };
 		6B821D03219233DF00C5332D /* NSLayoutConstraint+AnimatedConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+AnimatedConstant.swift"; sourceTree = "<group>"; };
@@ -106,6 +110,15 @@
 			path = TheWorldOnboarding;
 			sourceTree = "<group>";
 		};
+		6B1C3B3D2193D43600613B17 /* SlidingComments */ = {
+			isa = PBXGroup;
+			children = (
+				6B1C3B3E2193D45000613B17 /* SliddingCommentsView.swift */,
+				6B1C3B3F2193D45000613B17 /* SliddingCommentsView.xib */,
+			);
+			path = SlidingComments;
+			sourceTree = "<group>";
+		};
 		6B821CFE21922FF900C5332D /* Sluggish */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +156,7 @@
 		6BBE0463218D05EC009F2902 /* AnimationsToTheNextLevel */ = {
 			isa = PBXGroup;
 			children = (
+				6B1C3B3D2193D43600613B17 /* SlidingComments */,
 				6B1C3B382193A52800613B17 /* TheWorldOnboarding */,
 				6BBE048D218F9B5B009F2902 /* Coordinator */,
 				6BBE048C218F99CC009F2902 /* TheBasics */,
@@ -351,6 +365,7 @@
 				6BBE0484218F8D4A009F2902 /* MainView.xib in Resources */,
 				6B1C3B3C2193B4E100613B17 /* WorldOnboardingView.xib in Resources */,
 				6B821D092192870B00C5332D /* RuleOfThreeView.xib in Resources */,
+				6B1C3B412193D45000613B17 /* SliddingCommentsView.xib in Resources */,
 				6B821D022192300C00C5332D /* SluggishView.xib in Resources */,
 				6BBE046C218D05EF009F2902 /* Assets.xcassets in Resources */,
 				6BBE047C218D0C1D009F2902 /* IntroView.xib in Resources */,
@@ -384,6 +399,7 @@
 				6BBE047F218D0E60009F2902 /* UIView+Constraints.swift in Sources */,
 				6BBE0489218F9084009F2902 /* MaterialCardView.swift in Sources */,
 				6B1C3B3B2193B4E100613B17 /* WorldOnboardingView.swift in Sources */,
+				6B1C3B402193D45000613B17 /* SliddingCommentsView.swift in Sources */,
 				6BBE04A3218FD6DA009F2902 /* TheInteractiveView.swift in Sources */,
 				6BBE0493218F9D83009F2902 /* MainCoordinator.swift in Sources */,
 				6BBE048F218F9BEA009F2902 /* Coordinator.swift in Sources */,

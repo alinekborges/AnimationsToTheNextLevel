@@ -58,6 +58,11 @@ final class MainCoordinator: Coordinator {
         self.showFlow(withViews: views, toolbarHidden: true)
     }
     
+    func showTheSlidingComments() {
+        let views = [SliddingCommentsView.self]
+        self.showFlow(withViews: views, toolbarHidden: true)
+    }
+    
     private func showFlow(withViews views: [UIViewController.Type], toolbarHidden: Bool = false) {
         self.currentCoordinator = FlowCoordinator(mainView: self.mainView, views: views, toolbarHidden: toolbarHidden)
         self.currentCoordinator?.parentCoordinator = self
@@ -85,6 +90,8 @@ extension MainCoordinator {
             showTheProperties()
         case MainAction.theOnboarding:
             showTheOnboarding()
+        case MainAction.theSlidingComments:
+            showTheSlidingComments()
         case FlowAction.finish:
             dismissCurrent()
         default:

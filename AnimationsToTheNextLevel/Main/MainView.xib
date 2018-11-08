@@ -16,6 +16,7 @@
                 <outlet property="theCurveButton" destination="fc4-kY-omJ" id="TFo-tg-9oa"/>
                 <outlet property="theInteractiveButton" destination="22j-XQ-OHI" id="AUP-hF-MV4"/>
                 <outlet property="theOnboardingButton" destination="vJh-n6-YWP" id="e9W-if-ZgC"/>
+                <outlet property="theSlidingComments" destination="fQo-wr-kDz" id="U3A-Hr-LkB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,10 +29,10 @@
                     <rect key="frame" x="30" y="0.0" width="607" height="375"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOr-SQ-YcW">
-                            <rect key="frame" x="0.0" y="0.0" width="3030.5" height="375"/>
+                            <rect key="frame" x="0.0" y="0.0" width="3639" height="375"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="fvy-hj-iM3">
-                                    <rect key="frame" x="0.0" y="40" width="3030.5" height="295"/>
+                                    <rect key="frame" x="0.0" y="40" width="3639" height="295"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdP-pI-3Ql" customClass="MaterialCardView" customModule="AnimationsToTheNextLevel" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="595" height="295"/>
@@ -168,8 +169,36 @@
                                                 <constraint firstItem="g9E-DY-o55" firstAttribute="top" secondItem="zyk-4Y-pHE" secondAttribute="top" constant="60" id="z6B-gB-QTg"/>
                                             </constraints>
                                         </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fod-f3-Sip" userLabel="SlidingComments" customClass="MaterialCardView" customModule="AnimationsToTheNextLevel" customModuleProvider="target">
+                                            <rect key="frame" x="3044.5" y="0.0" width="594.5" height="295"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQo-wr-kDz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="594.5" height="295"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <connections>
+                                                        <action selector="onTap:" destination="-1" eventType="touchUpInside" id="iVq-Oz-C6w"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Sliding Comments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wOb-gl-rLb">
+                                                    <rect key="frame" x="135.5" y="60" width="323" height="42"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="35"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="wOb-gl-rLb" firstAttribute="centerX" secondItem="fod-f3-Sip" secondAttribute="centerX" id="3Gp-Pb-X9B"/>
+                                                <constraint firstItem="fQo-wr-kDz" firstAttribute="leading" secondItem="fod-f3-Sip" secondAttribute="leading" id="9xn-2x-Rin"/>
+                                                <constraint firstAttribute="bottom" secondItem="fQo-wr-kDz" secondAttribute="bottom" id="SJr-Iu-Qcf"/>
+                                                <constraint firstItem="fQo-wr-kDz" firstAttribute="top" secondItem="fod-f3-Sip" secondAttribute="top" id="rdl-DW-Hta"/>
+                                                <constraint firstItem="wOb-gl-rLb" firstAttribute="top" secondItem="fod-f3-Sip" secondAttribute="top" constant="60" id="twg-3n-Rol"/>
+                                                <constraint firstAttribute="trailing" secondItem="fQo-wr-kDz" secondAttribute="trailing" id="uCP-bb-H3b"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="fod-f3-Sip" firstAttribute="width" secondItem="tdP-pI-3Ql" secondAttribute="width" id="Ew1-Dr-HDg"/>
                                         <constraint firstItem="opS-Lr-WH1" firstAttribute="width" secondItem="tdP-pI-3Ql" secondAttribute="width" id="Gqq-bO-yjE"/>
                                         <constraint firstItem="hp8-dz-5ig" firstAttribute="width" secondItem="tdP-pI-3Ql" secondAttribute="width" id="dea-Dq-XZQ"/>
                                         <constraint firstItem="zyk-4Y-pHE" firstAttribute="width" secondItem="tdP-pI-3Ql" secondAttribute="width" id="qYy-mC-Cfb"/>
