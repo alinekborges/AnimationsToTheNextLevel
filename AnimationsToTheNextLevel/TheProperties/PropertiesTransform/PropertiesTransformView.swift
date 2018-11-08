@@ -37,11 +37,12 @@ class PropertiesTransformView: UIViewController {
         self.animatedViews.forEach { $0.layer.cornerRadius = 20 }
         self.animatedViews.forEach { $0.isUserInteractionEnabled = false }
         self.animatedViews.forEach { $0.backgroundColor = .lightGray }
+        self.setupAnimator()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.setupAnimator()
+        
     }
     
     func setupAnimator() {
@@ -51,11 +52,12 @@ class PropertiesTransformView: UIViewController {
             self.animatedViews.forEach { view in
                 let random:CGFloat = CGFloat((2...5).randomElement()!)
                 view.transform = CGAffineTransform(scaleX: random, y: random)
-                view.backgroundColor = Colors.randomColor()
                 view.alpha = 0.7
             }
             
         })
+        
+        animator?.pausesOnCompletion = false
         
     }
     
@@ -65,7 +67,6 @@ extension PropertiesTransformView: UIScrollViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let percent = scrollView.contentOffset.x / (scrollView.contentSize.width - scrollView.frame.width)
-        
         animator?.fractionComplete = percent
     }
     
