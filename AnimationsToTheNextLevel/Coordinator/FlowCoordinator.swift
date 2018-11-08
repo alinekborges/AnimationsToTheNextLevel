@@ -15,6 +15,7 @@ enum FlowAction: Event {
 class FlowCoordinator: Coordinator {
     
     let mainView: MainView
+    let toolbarHidden: Bool
     
     weak var parentCoordinator: Coordinator?
     
@@ -30,12 +31,14 @@ class FlowCoordinator: Coordinator {
     
     lazy var navigationController: CustomNavigationController = {
         let controller = CustomNavigationController()
+        controller.hideToolbar = self.toolbarHidden
         return controller
     }()
     
-    init(mainView: MainView, views: [UIViewController.Type]) {
+    init(mainView: MainView, views: [UIViewController.Type], toolbarHidden: Bool = false) {
         self.mainView = mainView
         self.orderedViews = views
+        self.toolbarHidden = toolbarHidden
     }
     
     func getView(_ type: UIViewController.Type) -> UIViewController {
@@ -52,7 +55,7 @@ class FlowCoordinator: Coordinator {
     }
     
     func handle(_ action: Event) {
-        //nothing to do here
+        self.parentCoordinator?.handle(action)
     }
     
     @objc func didTapNextButton(_ sender: Any) {

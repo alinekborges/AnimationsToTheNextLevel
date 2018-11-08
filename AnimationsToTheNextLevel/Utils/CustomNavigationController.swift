@@ -9,9 +9,12 @@
 import UIKit
 
 class CustomNavigationController: UINavigationController {
-
+    
+    var hideToolbar: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationBar.tintColor = .black
+        self.setNavigationBarHidden(self.hideToolbar, animated: false)
     }
 }

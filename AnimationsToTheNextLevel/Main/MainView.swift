@@ -13,6 +13,7 @@ enum MainAction: Event {
     case theInteractive
     case theCurve
     case theProperties
+    case theOnboarding
 }
 
 class MainView: UIViewController {
@@ -21,6 +22,7 @@ class MainView: UIViewController {
     @IBOutlet weak var theInteractiveButton: UIButton!
     @IBOutlet weak var theCurveButton: UIButton!
     @IBOutlet weak var thePropertiesButton: UIButton!
+    @IBOutlet weak var theOnboardingButton: UIButton!
     
     weak var coordinator: Coordinator?
     
@@ -50,6 +52,8 @@ class MainView: UIViewController {
             self.coordinator?.handle(MainAction.theCurve)
         case thePropertiesButton:
             self.coordinator?.handle(MainAction.theProperties)
+        case theOnboardingButton:
+            self.coordinator?.handle(MainAction.theOnboarding)
         default:
             break
         }

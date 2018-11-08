@@ -83,7 +83,6 @@ extension IntroView {
         }
         
         animators.forEach { $0.pausesOnCompletion = true }
-
         
     }
     

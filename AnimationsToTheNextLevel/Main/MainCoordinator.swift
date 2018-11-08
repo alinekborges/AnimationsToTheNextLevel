@@ -53,8 +53,13 @@ final class MainCoordinator: Coordinator {
         self.showFlow(withViews: views)
     }
     
-    private func showFlow(withViews views: [UIViewController.Type]) {
-        self.currentCoordinator = FlowCoordinator(mainView: self.mainView, views: views)
+    func showTheOnboarding() {
+        let views = [WorldOnboardingView.self]
+        self.showFlow(withViews: views, toolbarHidden: true)
+    }
+    
+    private func showFlow(withViews views: [UIViewController.Type], toolbarHidden: Bool = false) {
+        self.currentCoordinator = FlowCoordinator(mainView: self.mainView, views: views, toolbarHidden: toolbarHidden)
         self.currentCoordinator?.parentCoordinator = self
         self.currentCoordinator?.start()
     }
@@ -78,6 +83,8 @@ extension MainCoordinator {
             showTheCurve()
         case MainAction.theProperties:
             showTheProperties()
+        case MainAction.theOnboarding:
+            showTheOnboarding()
         case FlowAction.finish:
             dismissCurrent()
         default:

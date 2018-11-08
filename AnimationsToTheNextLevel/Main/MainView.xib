@@ -15,7 +15,7 @@
                 <outlet property="theBasicsButton" destination="9AK-j4-Tiv" id="VmA-t0-4AI"/>
                 <outlet property="theCurveButton" destination="fc4-kY-omJ" id="TFo-tg-9oa"/>
                 <outlet property="theInteractiveButton" destination="22j-XQ-OHI" id="AUP-hF-MV4"/>
-                <outlet property="thePropertiesButton" destination="T8Y-f5-Bbu" id="SV0-AY-gBk"/>
+                <outlet property="theOnboardingButton" destination="vJh-n6-YWP" id="e9W-if-ZgC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,10 +28,10 @@
                     <rect key="frame" x="30" y="0.0" width="607" height="375"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOr-SQ-YcW">
-                            <rect key="frame" x="0.0" y="0.0" width="2421.5" height="375"/>
+                            <rect key="frame" x="0.0" y="0.0" width="3030.5" height="375"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="fvy-hj-iM3">
-                                    <rect key="frame" x="0.0" y="40" width="2421.5" height="295"/>
+                                    <rect key="frame" x="0.0" y="40" width="3030.5" height="295"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdP-pI-3Ql" customClass="MaterialCardView" customModule="AnimationsToTheNextLevel" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="595" height="295"/>
@@ -141,10 +141,38 @@
                                                 <constraint firstItem="T8Y-f5-Bbu" firstAttribute="leading" secondItem="hp8-dz-5ig" secondAttribute="leading" id="x3F-2L-TB1"/>
                                             </constraints>
                                         </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zyk-4Y-pHE" customClass="MaterialCardView" customModule="AnimationsToTheNextLevel" customModuleProvider="target">
+                                            <rect key="frame" x="2435.5" y="0.0" width="595" height="295"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJh-n6-YWP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="595" height="295"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <connections>
+                                                        <action selector="onTap:" destination="-1" eventType="touchUpInside" id="A0C-NK-LYL"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Onboarding" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9E-DY-o55">
+                                                    <rect key="frame" x="181" y="60" width="233" height="42"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="35"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="vJh-n6-YWP" secondAttribute="bottom" id="MyU-jg-Mod"/>
+                                                <constraint firstItem="vJh-n6-YWP" firstAttribute="leading" secondItem="zyk-4Y-pHE" secondAttribute="leading" id="s1N-yR-PpT"/>
+                                                <constraint firstItem="g9E-DY-o55" firstAttribute="centerX" secondItem="zyk-4Y-pHE" secondAttribute="centerX" id="tME-PV-MHE"/>
+                                                <constraint firstItem="vJh-n6-YWP" firstAttribute="top" secondItem="zyk-4Y-pHE" secondAttribute="top" id="wZI-18-NY1"/>
+                                                <constraint firstAttribute="trailing" secondItem="vJh-n6-YWP" secondAttribute="trailing" id="yxx-4H-kYp"/>
+                                                <constraint firstItem="g9E-DY-o55" firstAttribute="top" secondItem="zyk-4Y-pHE" secondAttribute="top" constant="60" id="z6B-gB-QTg"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="opS-Lr-WH1" firstAttribute="width" secondItem="tdP-pI-3Ql" secondAttribute="width" id="Gqq-bO-yjE"/>
                                         <constraint firstItem="hp8-dz-5ig" firstAttribute="width" secondItem="tdP-pI-3Ql" secondAttribute="width" id="dea-Dq-XZQ"/>
+                                        <constraint firstItem="zyk-4Y-pHE" firstAttribute="width" secondItem="tdP-pI-3Ql" secondAttribute="width" id="qYy-mC-Cfb"/>
                                         <constraint firstItem="pHa-zc-W10" firstAttribute="width" secondItem="tdP-pI-3Ql" secondAttribute="width" id="vF9-2z-hH4"/>
                                     </constraints>
                                 </stackView>
