@@ -16,6 +16,7 @@
                 <outlet property="theCurveButton" destination="fc4-kY-omJ" id="TFo-tg-9oa"/>
                 <outlet property="theInteractiveButton" destination="22j-XQ-OHI" id="AUP-hF-MV4"/>
                 <outlet property="theOnboardingButton" destination="vJh-n6-YWP" id="e9W-if-ZgC"/>
+                <outlet property="thePropertiesButton" destination="T8Y-f5-Bbu" id="JI3-s0-HXt"/>
                 <outlet property="theSlidingComments" destination="fQo-wr-kDz" id="U3A-Hr-LkB"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
