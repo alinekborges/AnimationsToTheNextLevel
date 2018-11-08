@@ -11,6 +11,7 @@ import UIKit
 class PropertiesBlurView: UIViewController {
     
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var blurView: UIVisualEffectView!
     
     var animator: UIViewPropertyAnimator?
     
@@ -20,6 +21,7 @@ class PropertiesBlurView: UIViewController {
 
     init() {
         super.init(nibName: String(describing: PropertiesBlurView.self), bundle: nil)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -31,6 +33,17 @@ class PropertiesBlurView: UIViewController {
         self.title = ""
         self.scrollView.contentInsetAdjustmentBehavior = .never
         self.scrollView.delegate = self
+        self.setupAnimator()
+    }
+    
+    func setupAnimator() {
+        
+        self.blurView.effect = nil
+        
+        self.animator = UIViewPropertyAnimator(duration: 0.3, curve: .linear, animations: {
+            self.blurView.effect = UIBlurEffect(style: .dark)
+        })
+        
     }
     
 }

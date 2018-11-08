@@ -104,8 +104,8 @@
                         <constraint firstAttribute="width" secondItem="kNZ-Fj-hWn" secondAttribute="height" multiplier="1:1" id="rid-HP-Wvf"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transform" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwl-Ug-ETw">
-                    <rect key="frame" x="262.5" y="100" width="142" height="42"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwl-Ug-ETw">
+                    <rect key="frame" x="295" y="100" width="77" height="42"/>
                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="35"/>
                     <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                     <nil key="highlightedColor"/>

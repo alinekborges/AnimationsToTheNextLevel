@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PropertiesBlurView" customModule="AnimationsToTheNextLevel" customModuleProvider="target">
             <connections>
+                <outlet property="blurView" destination="tn7-sh-fbl" id="Wwh-8u-okN"/>
                 <outlet property="scrollView" destination="Csm-ob-Uhz" id="P9Y-R1-30A"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -21,7 +22,26 @@
             <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Csm-ob-Uhz">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo-1" translatesAutoresizingMaskIntoConstraints="NO" id="EYN-yK-VWH">
+                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                </imageView>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tn7-sh-fbl">
+                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hJN-Gw-p4T">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <blurEffect style="dark"/>
+                </visualEffectView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQb-AN-nzN">
+                    <rect key="frame" x="301.5" y="80" width="64" height="49"/>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="41"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Csm-ob-Uhz">
                     <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gMb-Tu-5z5">
@@ -29,10 +49,67 @@
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OaY-fz-4BM">
                                     <rect key="frame" x="667" y="0.0" width="667" height="375"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Xx-Rs-lqV">
+                                            <rect key="frame" x="68" y="216" width="531.5" height="63"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="self.">
+                                                    <attributes>
+                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <font key="NSFont" size="18" name="Menlo-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="blurView">
+                                                    <attributes>
+                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <font key="NSFont" size="18" name="Menlo-Bold"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment>
+                                                    <string key="content">.effect = nil
+
+self.</string>
+                                                    <attributes>
+                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <font key="NSFont" size="18" name="Menlo-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="blurView">
+                                                    <attributes>
+                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <font key="NSFont" size="18" name="Menlo-Bold"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content=".effect = ">
+                                                    <attributes>
+                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <font key="NSFont" size="18" name="Menlo-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="UIBlurEffect">
+                                                    <attributes>
+                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <font key="NSFont" size="18" name="Menlo-Bold"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="(style: .dark)">
+                                                    <attributes>
+                                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <font key="NSFont" size="18" name="Menlo-Regular"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="2Xx-Rs-lqV" firstAttribute="centerX" secondItem="OaY-fz-4BM" secondAttribute="centerX" id="fMc-cP-TRV"/>
+                                        <constraint firstItem="2Xx-Rs-lqV" firstAttribute="centerY" secondItem="OaY-fz-4BM" secondAttribute="centerY" constant="60" id="gaa-Y7-Wko"/>
+                                    </constraints>
                                 </view>
                             </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="OaY-fz-4BM" secondAttribute="trailing" id="B7i-ZD-Hka"/>
                                 <constraint firstItem="OaY-fz-4BM" firstAttribute="top" secondItem="gMb-Tu-5z5" secondAttribute="top" id="hee-RV-0EE"/>
@@ -54,11 +131,24 @@
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Csm-ob-Uhz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="0ab-HT-qdN"/>
+                <constraint firstItem="mQb-AN-nzN" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="80" id="4zL-Mk-eII"/>
+                <constraint firstAttribute="bottom" secondItem="EYN-yK-VWH" secondAttribute="bottom" id="H4r-ck-TXP"/>
+                <constraint firstItem="tn7-sh-fbl" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Lnj-Nm-DOz"/>
                 <constraint firstItem="Csm-ob-Uhz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="OVy-7K-gPk"/>
+                <constraint firstItem="EYN-yK-VWH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PZt-9H-LwV"/>
                 <constraint firstItem="Csm-ob-Uhz" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="UpD-qW-Kk7"/>
+                <constraint firstAttribute="trailing" secondItem="EYN-yK-VWH" secondAttribute="trailing" id="aON-r4-4n8"/>
+                <constraint firstAttribute="trailing" secondItem="tn7-sh-fbl" secondAttribute="trailing" id="asL-9Y-ZRa"/>
+                <constraint firstItem="mQb-AN-nzN" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="isV-2I-vx9"/>
+                <constraint firstAttribute="bottom" secondItem="tn7-sh-fbl" secondAttribute="bottom" id="qZT-jf-aTc"/>
+                <constraint firstItem="EYN-yK-VWH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="sdA-O8-RYh"/>
                 <constraint firstItem="Csm-ob-Uhz" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="wc8-Dw-Kka"/>
+                <constraint firstItem="tn7-sh-fbl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zI4-kZ-Ja4"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
+    <resources>
+        <image name="photo-1" width="776" height="516"/>
+    </resources>
 </document>
