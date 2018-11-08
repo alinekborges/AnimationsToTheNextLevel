@@ -10,10 +10,9 @@ import UIKit
 
 class PropertiesCornerRadiusView: UIViewController {
     
-    @IBOutlet weak var scrollView: UIScrollView!
-    
-    var animator: UIViewPropertyAnimator?
-    
+    @IBOutlet weak var animatedView: UIView!
+    var animator: UIViewPropertyAnimator!
+
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.landscape
     }
@@ -29,18 +28,20 @@ class PropertiesCornerRadiusView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = ""
-        self.scrollView.contentInsetAdjustmentBehavior = .never
-        self.scrollView.delegate = self
+        setupAnimator()
     }
     
-}
-
-extension PropertiesCornerRadiusView: UIScrollViewDelegate {
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let percent = scrollView.contentOffset.x / (scrollView.contentSize.width - scrollView.frame.width)
+    func setupAnimator() {
+        self.animator = UIViewPropertyAnimator(duration: 0.3, curve: .linear, animations: {
+            self.animatedView.layer.cornerRadius = self.animatedView.frame.height / 2
+        })
         
-        animator?.fractionComplete = percent
+        self.animator.pausesOnCompletion = false
     }
+    
+    @IBAction func sliderOnChange(_ sender: UISlider) {
+        self.animator.fractionComplete = CGFloat(sender.value)
+    }
+    
     
 }

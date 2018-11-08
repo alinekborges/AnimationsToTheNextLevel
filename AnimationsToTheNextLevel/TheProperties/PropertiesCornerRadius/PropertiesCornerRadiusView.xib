@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PropertiesCornerRadiusView" customModule="AnimationsToTheNextLevel" customModuleProvider="target">
             <connections>
-                <outlet property="scrollView" destination="S4F-KO-ATb" id="1K5-SW-fiQ"/>
+                <outlet property="animatedView" destination="vT1-2c-sNR" id="nCn-V9-9K2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,44 +21,31 @@
             <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S4F-KO-ATb">
-                    <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xq2-ls-zDP">
-                            <rect key="frame" x="0.0" y="0.0" width="1334" height="375"/>
-                            <subviews>
-                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MCV-ig-nBb">
-                                    <rect key="frame" x="667" y="0.0" width="667" height="375"/>
-                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </view>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="bottom" secondItem="MCV-ig-nBb" secondAttribute="bottom" id="76H-wU-Q9h"/>
-                                <constraint firstItem="MCV-ig-nBb" firstAttribute="top" secondItem="xq2-ls-zDP" secondAttribute="top" id="y1M-3s-F2F"/>
-                                <constraint firstAttribute="trailing" secondItem="MCV-ig-nBb" secondAttribute="trailing" id="y6d-uw-Dx9"/>
-                            </constraints>
-                        </view>
-                    </subviews>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1HJ-A3-fsZ">
+                    <rect key="frame" x="131.5" y="300" width="404" height="31"/>
+                    <connections>
+                        <action selector="sliderOnChange:" destination="-1" eventType="valueChanged" id="XTA-9Q-6QG"/>
+                    </connections>
+                </slider>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vT1-2c-sNR">
+                    <rect key="frame" x="239" y="73" width="189" height="189"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="xq2-ls-zDP" firstAttribute="width" secondItem="S4F-KO-ATb" secondAttribute="width" multiplier="2" id="9QB-ai-Kcg"/>
-                        <constraint firstAttribute="bottom" secondItem="xq2-ls-zDP" secondAttribute="bottom" id="Wvy-06-sl0"/>
-                        <constraint firstItem="MCV-ig-nBb" firstAttribute="width" secondItem="S4F-KO-ATb" secondAttribute="width" id="fF3-qf-01L"/>
-                        <constraint firstItem="xq2-ls-zDP" firstAttribute="top" secondItem="S4F-KO-ATb" secondAttribute="top" id="jkW-Ta-8Zb"/>
-                        <constraint firstItem="xq2-ls-zDP" firstAttribute="leading" secondItem="S4F-KO-ATb" secondAttribute="leading" id="lQ7-LP-RZz"/>
-                        <constraint firstItem="xq2-ls-zDP" firstAttribute="height" secondItem="S4F-KO-ATb" secondAttribute="height" id="rZJ-U6-E4y"/>
-                        <constraint firstAttribute="trailing" secondItem="xq2-ls-zDP" secondAttribute="trailing" id="yEc-Gb-Q9M"/>
+                        <constraint firstAttribute="width" secondItem="vT1-2c-sNR" secondAttribute="height" multiplier="1:1" id="t0C-dR-7Qp"/>
                     </constraints>
-                </scrollView>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="S4F-KO-ATb" secondAttribute="trailing" id="5WM-h5-6oe"/>
-                <constraint firstItem="S4F-KO-ATb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="K3X-ny-hhZ"/>
-                <constraint firstItem="S4F-KO-ATb" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bIb-qK-6OZ"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="S4F-KO-ATb" secondAttribute="bottom" id="r61-xV-qS9"/>
+                <constraint firstItem="1HJ-A3-fsZ" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Ceg-A1-NS4"/>
+                <constraint firstItem="vT1-2c-sNR" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Ndn-qD-aHU"/>
+                <constraint firstItem="1HJ-A3-fsZ" firstAttribute="top" secondItem="vT1-2c-sNR" secondAttribute="bottom" constant="38" id="UVx-cf-FUN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1HJ-A3-fsZ" secondAttribute="bottom" constant="45" id="Xdv-Sz-k78"/>
+                <constraint firstItem="vT1-2c-sNR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="73" id="eQJ-pw-UM9"/>
+                <constraint firstItem="1HJ-A3-fsZ" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.6" id="jAj-M0-gLB"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="54.422788605697157" y="205.59999999999999"/>
         </view>
     </objects>
 </document>
