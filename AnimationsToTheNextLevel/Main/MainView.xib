@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainView" customModule="AnimationsToTheNextLevel" customModuleProvider="target">
             <connections>
+                <outlet property="aboutMeView" destination="0n2-cU-caz" id="Hnm-5i-6bD"/>
                 <outlet property="theBasicsButton" destination="9AK-j4-Tiv" id="VmA-t0-4AI"/>
                 <outlet property="theCurveButton" destination="fc4-kY-omJ" id="TFo-tg-9oa"/>
                 <outlet property="theInteractiveButton" destination="22j-XQ-OHI" id="AUP-hF-MV4"/>
@@ -30,10 +31,10 @@
                     <rect key="frame" x="30" y="0.0" width="607" height="375"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KOr-SQ-YcW">
-                            <rect key="frame" x="0.0" y="0.0" width="3639" height="375"/>
+                            <rect key="frame" x="0.0" y="0.0" width="4248" height="375"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="fvy-hj-iM3">
-                                    <rect key="frame" x="0.0" y="40" width="3639" height="295"/>
+                                    <rect key="frame" x="0.0" y="40" width="4248" height="295"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tdP-pI-3Ql" customClass="MaterialCardView" customModule="AnimationsToTheNextLevel" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="595" height="295"/>
@@ -197,10 +198,15 @@
                                                 <constraint firstAttribute="trailing" secondItem="fQo-wr-kDz" secondAttribute="trailing" id="uCP-bb-H3b"/>
                                             </constraints>
                                         </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0n2-cU-caz" userLabel="AboutMe" customClass="MaterialCardView" customModule="AnimationsToTheNextLevel" customModuleProvider="target">
+                                            <rect key="frame" x="3653" y="0.0" width="595" height="295"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="fod-f3-Sip" firstAttribute="width" secondItem="tdP-pI-3Ql" secondAttribute="width" id="Ew1-Dr-HDg"/>
                                         <constraint firstItem="opS-Lr-WH1" firstAttribute="width" secondItem="tdP-pI-3Ql" secondAttribute="width" id="Gqq-bO-yjE"/>
+                                        <constraint firstItem="0n2-cU-caz" firstAttribute="width" secondItem="tdP-pI-3Ql" secondAttribute="width" id="KeY-nb-kQw"/>
                                         <constraint firstItem="hp8-dz-5ig" firstAttribute="width" secondItem="tdP-pI-3Ql" secondAttribute="width" id="dea-Dq-XZQ"/>
                                         <constraint firstItem="zyk-4Y-pHE" firstAttribute="width" secondItem="tdP-pI-3Ql" secondAttribute="width" id="qYy-mC-Cfb"/>
                                         <constraint firstItem="pHa-zc-W10" firstAttribute="width" secondItem="tdP-pI-3Ql" secondAttribute="width" id="vF9-2z-hH4"/>

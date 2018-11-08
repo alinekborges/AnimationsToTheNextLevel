@@ -22,6 +22,8 @@
 		6B5AB07A2194CD4E00581E78 /* PropertiesMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5AB0782194CD4E00581E78 /* PropertiesMaskView.swift */; };
 		6B5AB07B2194CD4E00581E78 /* PropertiesMaskView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B5AB0792194CD4E00581E78 /* PropertiesMaskView.xib */; };
 		6B5AB07D2194DC6800581E78 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5AB07C2194DC6800581E78 /* Colors.swift */; };
+		6B5AB0822194F53200581E78 /* AboutMeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5AB0802194F53200581E78 /* AboutMeView.swift */; };
+		6B5AB0832194F53200581E78 /* AboutMeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B5AB0812194F53200581E78 /* AboutMeView.xib */; };
 		6B821D012192300C00C5332D /* SluggishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B821CFF2192300C00C5332D /* SluggishView.swift */; };
 		6B821D022192300C00C5332D /* SluggishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B821D002192300C00C5332D /* SluggishView.xib */; };
 		6B821D04219233DF00C5332D /* NSLayoutConstraint+AnimatedConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B821D03219233DF00C5332D /* NSLayoutConstraint+AnimatedConstant.swift */; };
@@ -72,6 +74,8 @@
 		6B5AB0782194CD4E00581E78 /* PropertiesMaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesMaskView.swift; sourceTree = "<group>"; };
 		6B5AB0792194CD4E00581E78 /* PropertiesMaskView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PropertiesMaskView.xib; sourceTree = "<group>"; };
 		6B5AB07C2194DC6800581E78 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		6B5AB0802194F53200581E78 /* AboutMeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeView.swift; sourceTree = "<group>"; };
+		6B5AB0812194F53200581E78 /* AboutMeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutMeView.xib; sourceTree = "<group>"; };
 		6B821CFF2192300C00C5332D /* SluggishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SluggishView.swift; sourceTree = "<group>"; };
 		6B821D002192300C00C5332D /* SluggishView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SluggishView.xib; sourceTree = "<group>"; };
 		6B821D03219233DF00C5332D /* NSLayoutConstraint+AnimatedConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+AnimatedConstant.swift"; sourceTree = "<group>"; };
@@ -182,6 +186,15 @@
 			path = PropertiesMask;
 			sourceTree = "<group>";
 		};
+		6B5AB07F2194F50900581E78 /* AboutMe */ = {
+			isa = PBXGroup;
+			children = (
+				6B5AB0802194F53200581E78 /* AboutMeView.swift */,
+				6B5AB0812194F53200581E78 /* AboutMeView.xib */,
+			);
+			path = AboutMe;
+			sourceTree = "<group>";
+		};
 		6B821CFE21922FF900C5332D /* Sluggish */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +232,7 @@
 		6BBE0463218D05EC009F2902 /* AnimationsToTheNextLevel */ = {
 			isa = PBXGroup;
 			children = (
+				6B5AB07F2194F50900581E78 /* AboutMe */,
 				6B1C3B3D2193D43600613B17 /* SlidingComments */,
 				6B1C3B382193A52800613B17 /* TheWorldOnboarding */,
 				6BBE048D218F9B5B009F2902 /* Coordinator */,
@@ -420,6 +434,7 @@
 				6B5AB06F2194CD1300581E78 /* PropertiesColorView.xib in Resources */,
 				6BBE046F218D05EF009F2902 /* LaunchScreen.storyboard in Resources */,
 				6BF0CF04219132C50044897E /* TheCurveView.xib in Resources */,
+				6B5AB0832194F53200581E78 /* AboutMeView.xib in Resources */,
 				6B5AB0732194CD2400581E78 /* PropertiesBlurView.xib in Resources */,
 				6BBE0497218FA25E009F2902 /* TheBasicsIntro.xib in Resources */,
 				6BBE0484218F8D4A009F2902 /* MainView.xib in Resources */,
@@ -471,6 +486,7 @@
 				6B5AB0762194CD3200581E78 /* PropertiesCornerRadiusView.swift in Sources */,
 				6BBE048F218F9BEA009F2902 /* Coordinator.swift in Sources */,
 				6B5AB07A2194CD4E00581E78 /* PropertiesMaskView.swift in Sources */,
+				6B5AB0822194F53200581E78 /* AboutMeView.swift in Sources */,
 				6BBE04C02190F725009F2902 /* CustomNavigationController.swift in Sources */,
 				6BBE04BD2190F676009F2902 /* FractionCompleteView.swift in Sources */,
 			);

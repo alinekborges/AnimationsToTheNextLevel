@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutMeView" customModule="AnimationsToTheNextLevel" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lsc-U6-vMX" customClass="MaterialCardView" customModule="AnimationsToTheNextLevel" customModuleProvider="target">
+                    <rect key="frame" x="40" y="40" width="221.5" height="295"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aline" translatesAutoresizingMaskIntoConstraints="NO" id="1Tv-65-IdN">
+                            <rect key="frame" x="0.0" y="0.0" width="221.5" height="295"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="1Tv-65-IdN" secondAttribute="height" multiplier="1312:1749" id="0hJ-FH-MyP"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="1Tv-65-IdN" secondAttribute="bottom" id="Dbt-DQ-9vF"/>
+                        <constraint firstAttribute="trailing" secondItem="1Tv-65-IdN" secondAttribute="trailing" id="ori-k8-22D"/>
+                        <constraint firstItem="1Tv-65-IdN" firstAttribute="top" secondItem="Lsc-U6-vMX" secondAttribute="top" id="vbg-dx-slq"/>
+                        <constraint firstItem="1Tv-65-IdN" firstAttribute="leading" secondItem="Lsc-U6-vMX" secondAttribute="leading" id="vjU-Jh-gmg"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="linkedin.com/in/alinekborges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4K8-rp-S1b">
+                    <rect key="frame" x="381.5" y="298.5" width="255.5" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                    <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="github.com/alinekborges" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsq-qp-jae">
+                    <rect key="frame" x="414.5" y="264" width="222.5" height="26.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="22"/>
+                    <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="alinekborges@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYo-7o-fDt">
+                    <rect key="frame" x="467" y="237.5" width="170" height="18"/>
+                    <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                    <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="SYo-7o-fDt" firstAttribute="trailing" secondItem="wsq-qp-jae" secondAttribute="trailing" id="L7O-4o-1yM"/>
+                <constraint firstItem="wsq-qp-jae" firstAttribute="trailing" secondItem="4K8-rp-S1b" secondAttribute="trailing" id="ODr-n8-XBn"/>
+                <constraint firstItem="wsq-qp-jae" firstAttribute="top" secondItem="SYo-7o-fDt" secondAttribute="bottom" constant="8.5" id="OY9-Z4-R8e"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Lsc-U6-vMX" secondAttribute="bottom" constant="40" id="Uaq-4p-NT5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4K8-rp-S1b" secondAttribute="trailing" constant="30" id="fTI-dv-mpQ"/>
+                <constraint firstItem="4K8-rp-S1b" firstAttribute="top" secondItem="wsq-qp-jae" secondAttribute="bottom" constant="8" id="kaH-kd-RqJ"/>
+                <constraint firstItem="Lsc-U6-vMX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="kaz-Oi-ehz"/>
+                <constraint firstItem="Lsc-U6-vMX" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="mbu-T6-umw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="4K8-rp-S1b" secondAttribute="bottom" constant="50" id="pLZ-ON-Jea"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138.98050974512745" y="135.19999999999999"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="aline" width="1312" height="1749"/>
+    </resources>
+</document>

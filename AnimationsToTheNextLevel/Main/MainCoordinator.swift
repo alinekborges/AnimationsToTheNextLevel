@@ -52,8 +52,7 @@ final class MainCoordinator: Coordinator {
         let views = [PropertiesTransformView.self,
                      PropertiesColorView.self,
                      PropertiesBlurView.self,
-                     PropertiesCornerRadiusView.self,
-                     PropertiesMaskView.self]
+                     PropertiesCornerRadiusView.self]
         self.showFlow(withViews: views)
     }
     

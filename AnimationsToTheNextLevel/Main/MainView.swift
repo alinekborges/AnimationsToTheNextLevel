@@ -20,6 +20,7 @@ enum MainAction: Event {
 class MainView: UIViewController {
 
     @IBOutlet weak var theBasicsButton: UIButton!
+    @IBOutlet weak var aboutMeView: MaterialCardView!
     @IBOutlet weak var theInteractiveButton: UIButton!
     @IBOutlet weak var theCurveButton: UIButton!
     @IBOutlet weak var thePropertiesButton: UIButton!
@@ -42,6 +43,16 @@ class MainView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupAboutMe()
+    }
+    
+    func setupAboutMe() {
+        let aboutMe = AboutMeView()
+        self.aboutMeView.addSubview(aboutMe.view)
+        aboutMe.view.prepareForConstraints()
+        aboutMe.view.pinEdgesToSuperview()
+        self.addChild(aboutMe)
+        
     }
     
     @IBAction func onTap(_ sender: UIButton) {
