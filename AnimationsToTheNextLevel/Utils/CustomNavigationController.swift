@@ -17,4 +17,12 @@ class CustomNavigationController: UINavigationController {
         self.navigationBar.tintColor = .black
         self.setNavigationBarHidden(self.hideToolbar, animated: false)
     }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        if hideToolbar {
+            return UIInterfaceOrientationMask.portrait
+        } else {
+            return UIInterfaceOrientationMask.landscape
+        }
+    }
 }

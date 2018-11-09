@@ -61,7 +61,7 @@ class PropertiesColorView: UIViewController {
             
         })
         
-        animator?.pausesOnCompletion = false
+        animator?.pausesOnCompletion = true
         
     }
     

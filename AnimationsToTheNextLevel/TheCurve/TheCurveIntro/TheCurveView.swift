@@ -59,7 +59,7 @@ class TheCurveView: UIViewController {
             self.view.layoutIfNeeded()
         })
         self.animator?.scrubsLinearly = false
-        self.animator?.pausesOnCompletion = false
+        self.animator?.pausesOnCompletion = true
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {

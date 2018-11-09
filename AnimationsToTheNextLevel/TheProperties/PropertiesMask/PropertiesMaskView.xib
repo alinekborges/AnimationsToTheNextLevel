@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PropertiesMaskView" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PropertiesMaskView" customModule="AnimationsToTheNextLevel" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,17 +20,18 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PropertiesMaskView" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u5B-uf-Jjh">
-                    <rect key="frame" x="166" y="323" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hn-7a-8JN">
+                    <rect key="frame" x="170" y="344" width="46" height="30"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="openCamera:" destination="-1" eventType="touchUpInside" id="pTs-YX-zF1"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="u5B-uf-Jjh" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="GxN-Ef-OrH"/>
-                <constraint firstItem="u5B-uf-Jjh" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="vpk-wF-ISc"/>
+                <constraint firstItem="9hn-7a-8JN" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="Tyw-kP-1mc"/>
+                <constraint firstItem="9hn-7a-8JN" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="ihi-Ju-IuW"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>

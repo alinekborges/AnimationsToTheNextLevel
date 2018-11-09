@@ -54,7 +54,7 @@ extension FractionCompleteView {
             self.view.layoutIfNeeded()
         })
         
-        self.animator?.pausesOnCompletion = false
+        self.animator?.pausesOnCompletion = true
     }
     
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {

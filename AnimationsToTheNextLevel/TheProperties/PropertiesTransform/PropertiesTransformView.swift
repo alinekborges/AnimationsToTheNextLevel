@@ -57,7 +57,7 @@ class PropertiesTransformView: UIViewController {
             
         })
         
-        animator?.pausesOnCompletion = false
+        animator?.pausesOnCompletion = true
         
     }
     

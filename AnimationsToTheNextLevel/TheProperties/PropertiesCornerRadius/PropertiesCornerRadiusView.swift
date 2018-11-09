@@ -31,12 +31,17 @@ class PropertiesCornerRadiusView: UIViewController {
         setupAnimator()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.animator.stopAnimation(true)
+    }
+    
     func setupAnimator() {
         self.animator = UIViewPropertyAnimator(duration: 0.3, curve: .linear, animations: {
             self.animatedView.layer.cornerRadius = self.animatedView.frame.height / 2
         })
         
-        self.animator.pausesOnCompletion = false
+        self.animator.pausesOnCompletion = true
     }
     
     @IBAction func sliderOnChange(_ sender: UISlider) {

@@ -20,7 +20,7 @@ final class AppCoordinator: Coordinator {
     }
     
     func start() {
-        showMainView()
+        showIntroView()
         self.window.makeKeyAndVisible()
     }
     
