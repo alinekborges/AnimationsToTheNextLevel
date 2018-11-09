@@ -45,6 +45,7 @@ class PropertiesColorView: UIViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         self.animator?.stopAnimation(true)
     }
     

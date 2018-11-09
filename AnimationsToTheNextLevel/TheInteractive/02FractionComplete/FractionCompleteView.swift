@@ -28,6 +28,11 @@ class FractionCompleteView: SwipableViewController {
         self.setupSteps()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(true)
+        self.animator?.stopAnimation(true)
+    }
+    
     init() {
         super.init(nibName: String(describing: FractionCompleteView.self), bundle: nil)
     }

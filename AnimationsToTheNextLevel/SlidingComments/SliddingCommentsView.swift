@@ -120,6 +120,11 @@ class SliddingCommentsView: UIViewController {
         
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.runningAnimators.forEach {$0.stopAnimation(true)}
+    }
+    
     @objc func onDrag(_ gesture: UIPanGestureRecognizer) {
         
         switch gesture.state {

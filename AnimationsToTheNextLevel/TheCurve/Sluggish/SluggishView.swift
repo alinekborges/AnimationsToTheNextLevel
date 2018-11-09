@@ -32,6 +32,7 @@ class SluggishView: SwipableViewController {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         self.animators.forEach { $0.stopAnimation(true) }
     }
     

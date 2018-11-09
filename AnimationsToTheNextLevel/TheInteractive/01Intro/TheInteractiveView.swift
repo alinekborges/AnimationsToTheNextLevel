@@ -54,6 +54,10 @@ class TheInteractiveView: SwipableViewController {
         })
     
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.animator?.stopAnimation(true)
+    }
 
     func animateBall() {
         self.animator = UIViewPropertyAnimator(

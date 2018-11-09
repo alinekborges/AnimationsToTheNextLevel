@@ -42,7 +42,11 @@ class PropertiesTransformView: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.animator?.stopAnimation(true)
     }
     
     func setupAnimator() {

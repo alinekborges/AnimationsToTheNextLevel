@@ -39,6 +39,11 @@ class TheCurveView: UIViewController {
         self.ballConstraint.constant = ballPosition
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.animator?.stopAnimation(true)
+    }
+    
     func setupBezierPath() {
         bezierView.onPointChange = { pointA, pointB in
             self.pointALabel.text = "A: \(String(format: "(%.2f,%.2f)", pointA.x, pointA.y))"

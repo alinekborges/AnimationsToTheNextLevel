@@ -15,6 +15,7 @@ enum MainAction: Event {
     case theProperties
     case theOnboarding
     case theSlidingComments
+    case theCollapsingHeader
 }
 
 class MainView: UIViewController {
@@ -27,6 +28,7 @@ class MainView: UIViewController {
     @IBOutlet weak var thePropertiesButton: UIButton!
     @IBOutlet weak var theOnboardingButton: UIButton!
     @IBOutlet weak var theSlidingComments: UIButton!
+    @IBOutlet weak var theCollasingHeaderButton: UIButton!
     
     @IBOutlet weak var theBasicsBall: UIView!
     @IBOutlet weak var theInteractiveBall: UIView!
@@ -53,6 +55,11 @@ class MainView: UIViewController {
         setupTheBasicsAnimation()
         setupTheInteractiveAnimator()
         self.scrollView.delegate = self
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.theInteractorAnimator.stopAnimation(true)
     }
     
     func setupAboutMe() {
@@ -109,6 +116,8 @@ class MainView: UIViewController {
             self.coordinator?.handle(MainAction.theOnboarding)
         case theSlidingComments:
             self.coordinator?.handle(MainAction.theSlidingComments)
+        case theCollasingHeaderButton:
+            self.coordinator?.handle(MainAction.theCollapsingHeader)
         default:
             break
         }

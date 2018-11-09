@@ -45,6 +45,7 @@ class PropertiesBlurView: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.barTintColor = .white
         self.navigationController?.navigationBar.tintColor = .black
+        self.animator?.stopAnimation(true)
     }
     
     func setupAnimator() {

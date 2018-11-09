@@ -27,13 +27,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pxe-me-uN5">
-                    <rect key="frame" x="283.5" y="45" width="100" height="139"/>
+                    <rect key="frame" x="183.5" y="45" width="100" height="152.5"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9SK-e1-CaD">
-                            <rect key="frame" x="0.0" y="0.0" width="200" height="139"/>
+                            <rect key="frame" x="0.0" y="0.0" width="200" height="152.5"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qwi-Mt-Bxp">
-                                    <rect key="frame" x="0.0" y="194.5" width="200" height="24.5"/>
+                                    <rect key="frame" x="0.0" y="208" width="200" height="24.5"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jG-BP-JnZ">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="1"/>
@@ -75,13 +75,13 @@
                         <constraint firstItem="9SK-e1-CaD" firstAttribute="leading" secondItem="Pxe-me-uN5" secondAttribute="leading" id="JRt-Wc-L8E"/>
                         <constraint firstAttribute="bottom" secondItem="9SK-e1-CaD" secondAttribute="bottom" id="Jua-Ws-vxd"/>
                         <constraint firstAttribute="width" constant="100" id="SHR-lu-7ME"/>
-                        <constraint firstAttribute="width" secondItem="Pxe-me-uN5" secondAttribute="height" multiplier="23:32" id="WDI-zB-NUC"/>
+                        <constraint firstAttribute="width" secondItem="Pxe-me-uN5" secondAttribute="height" multiplier="21:32" id="WDI-zB-NUC"/>
                         <constraint firstItem="9SK-e1-CaD" firstAttribute="width" secondItem="Pxe-me-uN5" secondAttribute="width" multiplier="2" id="q7n-cD-5JS"/>
                         <constraint firstItem="9SK-e1-CaD" firstAttribute="height" secondItem="Pxe-me-uN5" secondAttribute="height" id="v9h-xu-LZw"/>
                     </constraints>
                 </scrollView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lcV-2f-gmJ">
-                    <rect key="frame" x="283.5" y="196" width="100" height="24.5"/>
+                    <rect key="frame" x="183.5" y="209.5" width="100" height="24.5"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Agl-ca-LHa">
                             <rect key="frame" x="0.0" y="0.0" width="100" height="1"/>
@@ -109,19 +109,13 @@
                     </constraints>
                 </view>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLA-f7-ZLG">
-                    <rect key="frame" x="567" y="133" width="28" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currentPosition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqk-pF-5bP">
-                    <rect key="frame" x="523.5" y="104.5" width="115" height="20.5"/>
+                    <rect key="frame" x="84.5" y="117.5" width="28" height="20.5"/>
                     <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3D8-Fs-m4K">
-                    <rect key="frame" x="35" y="135" width="186" height="105"/>
+                    <rect key="frame" x="461" y="135" width="186" height="105"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="100%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb0-UG-mf1">
                             <rect key="frame" x="0.0" y="12" width="60.5" height="30"/>
@@ -184,23 +178,39 @@
                         <constraint firstItem="8Kg-A0-MJW" firstAttribute="leading" secondItem="3D8-Fs-m4K" secondAttribute="leading" id="zm1-tD-fwU"/>
                     </constraints>
                 </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="frame_iphonex" translatesAutoresizingMaskIntoConstraints="NO" id="w9O-nM-RNI">
+                    <rect key="frame" x="183.5" y="45" width="100" height="152.5"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currentPosition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bqk-pF-5bP">
+                    <rect key="frame" x="41" y="89" width="115" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="lcV-2f-gmJ" firstAttribute="top" secondItem="Pxe-me-uN5" secondAttribute="bottom" constant="12" id="0dW-Dw-rMC"/>
                 <constraint firstItem="3D8-Fs-m4K" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="BtC-Ug-mgD"/>
-                <constraint firstItem="bqk-pF-5bP" firstAttribute="leading" secondItem="Pxe-me-uN5" secondAttribute="trailing" constant="140" id="DdS-P8-WA4"/>
-                <constraint firstItem="bqk-pF-5bP" firstAttribute="centerY" secondItem="Pxe-me-uN5" secondAttribute="centerY" id="ID4-BZ-L8X"/>
                 <constraint firstItem="kLA-f7-ZLG" firstAttribute="top" secondItem="bqk-pF-5bP" secondAttribute="bottom" constant="8" id="LwA-ri-Ofp"/>
                 <constraint firstItem="lcV-2f-gmJ" firstAttribute="width" secondItem="Pxe-me-uN5" secondAttribute="width" id="T1U-HO-IdC"/>
-                <constraint firstItem="Pxe-me-uN5" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="Z9q-vh-Y2k"/>
-                <constraint firstItem="kLA-f7-ZLG" firstAttribute="centerX" secondItem="bqk-pF-5bP" secondAttribute="centerX" id="dsC-Qs-MKY"/>
+                <constraint firstItem="w9O-nM-RNI" firstAttribute="centerX" secondItem="Pxe-me-uN5" secondAttribute="centerX" id="VRn-2f-NUy"/>
+                <constraint firstItem="w9O-nM-RNI" firstAttribute="width" secondItem="Pxe-me-uN5" secondAttribute="width" id="XV3-lv-cFr"/>
+                <constraint firstItem="Pxe-me-uN5" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" constant="-100" id="Z9q-vh-Y2k"/>
                 <constraint firstItem="lcV-2f-gmJ" firstAttribute="centerX" secondItem="Pxe-me-uN5" secondAttribute="centerX" id="hKA-xN-Eq4"/>
-                <constraint firstItem="3D8-Fs-m4K" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="35" id="iCi-SN-1Ta"/>
+                <constraint firstItem="w9O-nM-RNI" firstAttribute="height" secondItem="Pxe-me-uN5" secondAttribute="height" id="hXt-nC-Ed4"/>
+                <constraint firstItem="bqk-pF-5bP" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="89" id="jQW-BN-QFT"/>
+                <constraint firstItem="w9O-nM-RNI" firstAttribute="centerY" secondItem="Pxe-me-uN5" secondAttribute="centerY" id="ltQ-qY-so0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3D8-Fs-m4K" secondAttribute="trailing" constant="20" id="m9c-Mj-xDv"/>
+                <constraint firstItem="kLA-f7-ZLG" firstAttribute="centerX" secondItem="bqk-pF-5bP" secondAttribute="centerX" id="nsU-hn-03D"/>
                 <constraint firstItem="Pxe-me-uN5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="45" id="qrK-cU-Z5b"/>
+                <constraint firstItem="w9O-nM-RNI" firstAttribute="leading" secondItem="bqk-pF-5bP" secondAttribute="trailing" constant="27.5" id="vCx-UB-8ji"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="138.98050974512745" y="114.40000000000001"/>
         </view>
     </objects>
+    <resources>
+        <image name="frame_iphonex" width="432" height="863"/>
+    </resources>
 </document>
